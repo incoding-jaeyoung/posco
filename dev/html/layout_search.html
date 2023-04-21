@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>타이틀 텍스트</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>버튼</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>버튼</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>버튼</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__search-box S -->
+								<div class="pos__search-box">
+									<!-- pos__search-cont S -->
+									<div class="pos__search-cont">
+										<!-- pos__grid S -->
+										<div class="pos__grid">
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos1"><span>레이블명</span></label>
+														</dt>
+														<dd><input class="pos__input-text" id="pos1" type="text" name="" value="" placeholder="가이드 텍스트" /></dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos2"><span>레이블명</span></label>
+														</dt>
+														<dd><input class="pos__input-text" id="pos2" type="text" name="" value="" placeholder="가이드 텍스트" /></dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos3"><span>레이블명</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos3">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos4"><span>레이블명</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos4">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+											</ul>
+											<!--// pos__grid-row E -->
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col col-6">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<span>레이블명</span>
+														</dt>
+														<dd>
+															<!-- pos__checkbox-text S -->
+															<span class="pos__checkbox-text">
+																<input type="checkbox" class="pos__checkbox" id="searchCheckbox6" name="searchCheckbox" checked />
+																<label for="searchCheckbox6">옵션명1</label>
+															</span>
+															<!--// pos__checkbox-text E -->
+															<!-- pos__checkbox-text S -->
+															<span class="pos__checkbox-text">
+																<input type="checkbox" class="pos__checkbox" id="searchCheckbox7" name="searchCheckbox" />
+																<label for="searchCheckbox7">옵션명2</label>
+															</span>
+															<!--// pos__checkbox-text E -->
+															<!-- pos__checkbox-text S -->
+															<span class="pos__checkbox-text">
+																<input type="checkbox" class="pos__checkbox" id="searchCheckbox8" name="searchCheckbox" />
+																<label for="searchCheckbox8">옵션명3</label>
+															</span>
+															<!--// pos__checkbox-text E -->
+															<!-- pos__checkbox-text S -->
+															<span class="pos__checkbox-text">
+																<input type="checkbox" class="pos__checkbox" id="searchCheckbox9" name="searchCheckbox" />
+																<label for="searchCheckbox9">옵션명4</label>
+															</span>
+															<!--// pos__checkbox-text E -->
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col col-6">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos5"><span>레이블명</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos5">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+															<input class="pos__input-text mg-l6" id="pos1" type="text" name="" value="" placeholder="가이드 텍스트" />
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+											</ul>
+											<!--// pos__grid-row E -->
+										</div>
+										<!--// pos__grid E -->
+									</div>
+									<!--// pos__search-cont E -->
+									<!-- pos__search-right S -->
+									<div class="pos__search-right">
+										<!-- pos__btn-box S -->
+										<div class="pos__btn-box">
+											<button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+										</div>
+										<!--// pos__btn-box E -->
+									</div>
+									<!--// pos__search-right E -->
+								</div>
+								<!--// pos__search-box E -->
+
+								<!-- pos__search-box S -->
+								<div class="pos__search-box mg-t16">
+									<!-- pos__search-complex S -->
+									<div class="pos__search-complex">
+										<!-- pos__search-complex-box S -->
+										<dl class="pos__search-complex-box">
+											<!-- pos__search-title S -->
+											<dt class="pos__search-title">
+												<h3>
+													레이블명
+													<button type="button" class="btn__toggle-table">
+														<span class="icon-toggle"><!--토글버튼--></span>
+													</button>
+												</h3>
+											</dt>
+											<!--// pos__search-title E -->
+											<!-- pos__search-cont S -->
+											<dd class="pos__search-cont">
+												<!-- pos__grid S -->
+												<div class="pos__grid">
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos6"><span>하위레이블명</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos6">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option>선택</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos7"><span>하위레이블명</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos7">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option>선택</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col col-6">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos8"><span>하위레이블명</span></label>
+																</dt>
+																<dd>
+																	<!-- pos__search S -->
+																	<div class="pos__search">
+																		<input class="pos__input-text" id="pos8" type="text" name="" value="" placeholder="검색어를 입력하세요." />
+																		<button type="button" class="btn__search">
+																			<span><!--검색--></span>
+																		</button>
+																	</div>
+																	<!--// pos__search E -->
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col col-6">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos9"><span>하위레이블명</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos9" type="text" name="" value="" placeholder="가이드 텍스트" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col col-6">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<span>하위레이블명</span>
+																</dt>
+																<dd>
+																	<!-- pos__checkbox-text S -->
+																	<span class="pos__checkbox-text">
+																		<input type="checkbox" class="pos__checkbox" id="searchCheckbox1" name="searchCheckbox2" checked />
+																		<label for="searchCheckbox1">옵션명1</label>
+																	</span>
+																	<!--// pos__checkbox-text E-->
+																	<!-- pos__checkbox-text S -->
+																	<span class="pos__checkbox-text">
+																		<input type="checkbox" class="pos__checkbox" id="searchCheckbox2" name="searchCheckbox2" />
+																		<label for="searchCheckbox2">옵션명2</label>
+																	</span>
+																	<!--// pos__checkbox-text E-->
+																	<!-- pos__checkbox-text S -->
+																	<span class="pos__checkbox-text">
+																		<input type="checkbox" class="pos__checkbox" id="searchCheckbox3" name="searchCheckbox2" />
+																		<label for="searchCheckbox3">옵션명3</label>
+																	</span>
+																	<!--// pos__checkbox-text E-->
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+												</div>
+												<!--// pos__grid E -->
+											</dd>
+											<!--// pos__search-cont E -->
+										</dl>
+										<!--// pos__search-complex-box E -->
+										<!-- pos__search-complex-box S -->
+										<dl class="pos__search-complex-box">
+											<!-- pos__search-title S -->
+											<dt class="pos__search-title">
+												<h3>
+													레이블명
+													<button type="button" class="btn__toggle-table">
+														<span class="icon-toggle"><!--토글버튼--></span>
+													</button>
+												</h3>
+											</dt>
+											<!--// pos__search-title E -->
+											<!-- pos__search-cont S -->
+											<dd class="pos__search-cont">
+												<!-- pos__grid S -->
+												<div class="pos__grid">
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos6"><span>하위레이블명</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos6">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option>선택</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos7"><span>하위레이블명</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos7">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option>선택</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col col-6">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos8"><span>하위레이블명</span></label>
+																</dt>
+																<dd>
+																	<!-- pos__input-letter S -->
+																	<div class="pos__input-letter">
+																		<input class="pos__input-text" id="pos8" type="text" name="" value="" placeholder="0" />
+																		<span>원</span>
+																	</div>
+																	<!--// pos__input-letter E -->
+																	<span class="icon-wave"><!--~--></span>
+																	<!-- pos__input-letter S -->
+																	<div class="pos__input-letter">
+																		<input class="pos__input-text" id="pos8-2" type="text" name="" value="" placeholder="0" />
+																		<span>원</span>
+																	</div>
+																	<!--// pos__input-letter E -->
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+												</div>
+												<!--// pos__grid E -->
+											</dd>
+											<!--// pos__search-cont E -->
+										</dl>
+										<!--// pos__search-complex-box E -->
+									</div>
+									<!--// pos__search-complex E -->
+									<!-- pos__search-right S -->
+									<div class="pos__search-right">
+										<!-- pos__btn-box S -->
+										<div class="pos__btn-box">
+											<button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+										</div>
+										<!--// pos__btn-box E -->
+									</div>
+									<!--// pos__search-right E -->
+								</div>
+								<!--// pos__search-box E -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+	</body>
+</html>

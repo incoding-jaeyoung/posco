@@ -1,0 +1,7 @@
+<svg data-name="Close(Large)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="opacity:.001;fill:none" d="M0 0h24v24H0z"/>
+    <path d="M1 2.333v13.334A1.31 1.31 0 0 0 2.286 17h15.428A1.31 1.31 0 0 0 19 15.667V5a1.31 1.31 0 0 0-1.286-1.333H10L7.429 1H2.286A1.31 1.31 0 0 0 1 2.333z" transform="translate(2 3)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+    <path data-name="Vecxtor" d="M1 2.151V5.2h18v-.748A1.224 1.224 0 0 0 17.714 3.3H10L7.429 1H2.286A1.224 1.224 0 0 0 1 2.151z" transform="translate(2.001 2.5)" style="fill:#fff"/>
+    <rect data-name="사각형 161576" width="1.5" height="7.5" rx=".75" transform="rotate(45 -4.87 22.385)" style="fill:#fff"/>
+    <rect data-name="사각형 161577" width="1.5" height="7.5" rx=".75" transform="rotate(135 4.562 10.854)" style="fill:#fff"/>
+</svg>

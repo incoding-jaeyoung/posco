@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- 헤더 영역 pos__header S -->
+			<header id="header" class="pos__header">
+				<!-- 로고 영역 pos__header-logo S -->
+				<div class="pos__header-logo">
+					<button type="button" class="btn__menu-all" id="closeAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<button type="button" class="btn__menu-all" id="openAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<!-- 로고 pos__header-logo S -->
+					<div class="pos__logo">
+						<h1>e-Procurement</h1>
+						구매관리시스템
+					</div>
+					<!--// 로고 pos__header-logo E -->
+				</div>
+				<!--// 로고 pos__header-logo E -->
+
+				<!-- 상단 메뉴 영역 pos__header-navigation S -->
+				<div class="pos__header-navigation">
+					<!-- pos__navigation-top S -->
+					<nav class="pos__navigation-top">
+						<ul>
+							<li class="action">
+								<!-- 활성화시 class="action" -->
+								<a href="#" onclick="return false;"><span>메뉴명1</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명2</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명3</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명4</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명5</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명6</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명7</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명8</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명9</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명10</span></a>
+							</li>
+						</ul>
+					</nav>
+					<!--// pos__navigation-top E -->
+
+					<section>
+						<div class="pos__header-project">
+							<select class="pos__select" data-placeholder="선택">
+								<option>프로젝트명1</option>
+								<option>프로젝트명2</option>
+								<option>프로젝트명3</option>
+								<option>프로젝트명4</option>
+								<option>프로젝트명5</option>
+							</select>
+						</div>
+
+						<div class="pos__header-search">
+							<label class="Lhide" for="menu-search">검색</label>
+							<input type="text" class="pos__input-txt" id="menu-search" placeholder="검색어를 입력하세요" name="" value="" />
+							<button type="button" class="btn__search">검색</button>
+						</div>
+						<hr />
+						<!-- pos__magnifying S -->
+						<div class="pos__magnifying">
+							<!-- pos__form-box S -->
+							<dl class="pos__form-box">
+								<dt class="tit">
+									<label for="magnifying">
+										<span>화면배율</span>
+										<span class="icon-infoB2"><!--안내--></span>
+										<span class="icon-malkanBK textL"
+											>브라우저에서 설정한 화별배율 조정 기능과는 별개로<br />시스템 화면의 화면 배율을 조정하여 사용할 수 있습니다.</span
+										>
+									</label>
+								</dt>
+								<dd>
+									<select class="pos__select" data-placeholder="선택" id="magnifying">
+										<option value="150">150%</option>
+										<option value="125">125%</option>
+										<option value="110">110%</option>
+										<option value="100" selected>100%</option>
+										<option value="90">90%</option>
+										<option value="80">80%</option>
+										<option value="75">75%</option>
+									</select>
+								</dd>
+							</dl>
+							<!--// pos__form-box E -->
+						</div>
+						<!--// pos__magnifying -->
+					</section>
+				</div>
+				<!--// 상단 메뉴 pos__header-navigation E -->
+			</header>
+			<!--// 헤더 영역 pos__header E -->
+
+			<!-- 서포터바 영역 pos__bar S -->
+			<div class="pos__bar">
+				<button type="button" class="btn__bar-open">
+					<span class="icon-arrowW">열기</span>
+				</button>
+				<!-- pos__bar-box S -->
+				<div class="pos__bar-box">
+					<!-- pos__bar-top S -->
+					<div class="pos__bar-top">
+						<button type="button" class="btn__bar-fix">고정</button>
+						<button type="button" class="btn__bar-fixNO">고정해지</button>
+						<span class="icon-malkanBK">고정</span>
+					</div>
+					<!--// pos__bar-top E -->
+
+					<!-- pos__bar-list S -->
+					<div class="pos__bar-list">
+						<ul>
+							<li>
+								<!--Selected시 li에 class ="action" 추가 -->
+								<button type="button" class="btn__bar-link">
+									<!--알림 내역 있을 경우 new 추가-->
+									<span class="icon-alarm new"><!--알림--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-book-list"><!--리스트--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-chat"><!--체크--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-share"><!--공유--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-info"><!--인포--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+						</ul>
+					</div>
+					<!--// pos__bar-list E -->
+
+					<!-- pos__bar-foot S -->
+					<div class="pos__bar-foot">
+						<button type="button" class="btn__bar-link">
+							<span class="icon-setting"><!--설정--></span>
+						</button>
+						<span class="icon-malkanBK">설정</span>
+					</div>
+					<!--// pos__bar-list E -->
+				</div>
+				<!--// pos__bar-box E -->
+			</div>
+			<!--// 서포터바 영역 pos__bar E -->
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 좌측 영역 pos__side S -->
+				<div class="pos__side">
+					<!-- pos__side-navigation S -->
+					<div class="pos__side-navigation">
+						<!-- pos__tab-list S -->
+						<ul class="pos__tab-list">
+							<li class="action"><span class="icon-meun"></span>전체메뉴</li>
+							<li><span class="icon-favorites"></span>즐겨찾기</li>
+						</ul>
+						<!--// pos__tab-list E -->
+
+						<!-- 좌측 스크롤 영역 pos__scroll S -->
+						<div class="pos__scroll">
+							<!-- 전체메뉴 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- 좌측 검생 영역 pos__side-search S -->
+								<div class="pos__side-search">
+									<label class="Lhide" for="menu-search">메뉴 검색</label>
+									<input type="text" class="pos__input-txt" id="menu-search" placeholder="메뉴 검색" name="" value="" />
+									<button type="button" class="btn__search">검색</button>
+								</div>
+								<!--// 좌측 검생 영역 pos__side-search E -->
+
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side">
+										<li class="action">
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub" style="display: block">
+												<ul>
+													<li class="action">
+														<a href="#" onclick="return false;">메뉴명 1-1-1</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre" style="display: block">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-1</a></li>
+																<li class="action"><a href="#" onclick="return false;">메뉴명 1-1-1-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-2</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-3</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-3<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-4<span class="icon-arrow1"></span></a>
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 전체메뉴 목록 pos__tab-cont E -->
+
+							<!-- 즐겨찾기 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side" id="favoritesList">
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 즐겨찾기 목록 pos__tab-cont E -->
+						</div>
+						<!--// 좌측 스크롤 영역 pos__scroll E -->
+					</div>
+					<!--// pos__side-navigation E -->
+				</div>
+				<!--// 좌측영역 pos__side E -->
+
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>협력업체</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명 화면명 화면명 화면명 화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data pd-b20">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>협력업체</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>인쇄</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>저장</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__search-box S -->
+								<!-- 좌측 새로고침(초기화) 버튼이 없을 시 추가 class = no-table -->
+								<div class="pos__search-box no-table">
+									<!-- pos__search-cont S -->
+									<div class="pos__search-cont">
+										<!-- pos__grid S -->
+										<div class="pos__grid">
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col col-6">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos1">
+																<span>협력업체</span>
+															</label>
+														</dt>
+														<dd>
+															<input class="pos__input-text pos__size-small" id="pos1" type="text" name="" value="1019859" />
+															<input class="pos__input-text pos__size-small" id="pos1-2" type="text" name="" value="(주)포스코아이씨티" />
+															<input class="pos__input-text" id="pos1-3" type="text" name="" value="POSCOICT CO.,LTD." />
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos2"><span>분야</span></label>
+														</dt>
+														<dd>
+															<input class="pos__input-text" id="pos2" type="text" name="" value="공급사" />
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos3"><span>구분</span></label>
+														</dt>
+														<dd>
+															<input class="pos__input-text" id="pos3" type="text" name="" value="Agency" />
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+											</ul>
+											<!--// pos__grid-row E -->
+										</div>
+										<!--// pos__grid E -->
+									</div>
+									<!--// pos__search-cont E -->
+								</div>
+								<!--// pos__search-box E -->
+
+								<!-- pos__tab-wrap S -->
+								<!-- tab 기능 사용시 class="pos__tab-wrap" 추가 -->
+								<div class="pos__tab-wrap">
+									<!-- pos__tab-slide S -->
+									<div class="pos__tab-slide mg-t16">
+										<!-- pos__tab-scroll S -->
+										<div class="pos__tab-scroll">
+											<span class="tab_selected">기본정보</span>
+											<span>연락처</span>
+											<span>등록소싱그룹</span>
+											<span>분기수행도평가</span>
+											<span>첨부파일</span>
+											<span>업체평가이력</span>
+											<span>입찰실적</span>
+											<span>연락처</span>
+											<span>등록소싱그룹</span>
+											<span>분기수행도평가</span>
+											<span>첨부파일</span>
+											<span>업체평가이력</span>
+											<span>입찰실적</span>
+											<span>연락처</span>
+											<span>등록소싱그룹</span>
+											<span>분기수행도평가</span>
+											<span>연락처</span>
+											<span>입찰실적</span>
+											<span>품질실적보고</span>
+											<span>연락처</span>
+											<span>입찰실적</span>
+											<span>품질실적보고</span>
+											<span>연락처</span>
+											<span>입찰실적</span>
+											<span>품질실적보고</span>
+										</div>
+										<!--// pos__tab-scroll E -->
+										<!-- pos__box-control S -->
+										<ul class="pos__box-control">
+											<li><button class="btn__slide-more">더보기</button></li>
+										</ul>
+										<!--// pos__box-control E -->
+									</div>
+									<!--// pos__tab-slide E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box0">
+										<!-- pos__search-box S -->
+										<!-- 좌측 새로고침(초기화) 버튼이 없을 시 추가 class = no-table -->
+										<div class="pos__search-box no-table">
+											<!-- pos__search-cont S -->
+											<div class="pos__search-cont">
+												<!-- pos__grid S -->
+												<div class="pos__grid">
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos4">
+																		<span>업체약어</span>
+																	</label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos1" type="text" name="" value="포스코아이씨티" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos5"><span>ID</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos5" type="text" name="" value="posdtani" disabled />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos6"><span>사업자등록번호</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select pos__size-small" data-placeholder="선택" id="pos6">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>법인</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																	<input class="pos__input-text" id="pos6-1" type="text" name="" value="219-81-00428" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos7"><span>법인등록번호</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos7" type="text" name="" value="110111-0658637" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos8">
+																		<span>대표자</span>
+																	</label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos8" type="text" name="" value="손건재" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos9"><span>대표자수</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos9" type="text" name="" value="1" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos10"><span>설립일</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos10" type="text" name="" value="2002/08/31" disabled />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos11"><span>국가</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos11" type="text" name="" value="대한민국" disabled />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos12">
+																		<span>본지사구분</span>
+																	</label>
+																</dt>
+																<dd>
+																	<!-- pos__radio-text S -->
+																	<span class="pos__radio-text">
+																		<input type="radio" class="pos__radio" id="r1" name="radio1" />
+																		<label for="r1">본사</label>
+																	</span>
+																	<!--// pos__radio-text E -->
+																	<!-- pos__radio-text S -->
+																	<span class="pos__radio-text">
+																		<input type="radio" class="pos__radio" id="r2" name="radio1" />
+																		<label for="r2">지사</label>
+																	</span>
+																	<!--// pos__radio-text E -->
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos13"><span>사업장소유</span></label>
+																</dt>
+																<dd>
+																	<!-- pos__radio-text S -->
+																	<span class="pos__radio-text">
+																		<input type="radio" class="pos__radio" id="r3" name="radio2" />
+																		<label for="r3">YES</label>
+																	</span>
+																	<!--// pos__radio-text E -->
+																	<!-- pos__radio-text S -->
+																	<span class="pos__radio-text">
+																		<input type="radio" class="pos__radio" id="r4" name="radio2" />
+																		<label for="r4">NO</label>
+																	</span>
+																	<!--// pos__radio-text E -->
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos14"><span>설립일</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select pos__size-small" data-placeholder="선택" id="pos14">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>포항</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																	<input class="pos__input-text" id="pos14-1" type="text" name="" value="경북 포항시" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos15"><span>국가</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos15">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>대기업</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos16">
+																		<span>우대대상</span>
+																	</label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos16">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>사회적기업</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos17"><span>기업유형</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos17">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>기타</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos18"><span>신용평가사</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos18">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>이크레더블</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos19"><span>신용등급</span></label>
+																</dt>
+																<dd>
+																	<select class="pos__select" data-placeholder="선택" id="pos19">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>이크레더블</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																	<!-- pos__btn-box S -->
+																	<div class="pos__btn-box">
+																		<button type="button" class="btn__small color-blue2"><span>신용정보조회</span></button>
+																	</div>
+																	<!--// pos__btn-box E -->
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos20">
+																		<span>현금흐름등급</span>
+																	</label>
+																</dt>
+																<dd>
+																	<select class="pos__select pos__size-small" data-placeholder="선택" id="pos20">
+																		<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																		<option selected>사회적기업</option>
+																		<option>선택</option>
+																		<option>선택</option>
+																	</select>
+																	<input class="pos__input-text" id="pos20-1" type="text" name="" value="R-3(만료)" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos21"><span>홈페이지</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos21" type="text" name="" value="www.poscoict.com" />
+																</dd>
+															</dl>
+														</li>
+														<li class="col col-6">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos22"><span>본사주소</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text pos__size-small2" id="pos22" type="text" name="" value="79038" />
+																	<input class="pos__input-text pos__size-small3" id="pos22-1" type="text" name="" value="경상북도 포항시 남구 호동" />
+																	<input class="pos__input-text" id="pos22-2" type="text" name="" value="606" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos23">
+																		<span>본사전화번호</span>
+																	</label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos23" type="text" name="" value="031-723-2698" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos24"><span>본사팩스번호</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos24" type="text" name="" value="031-723-2109" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col col-6">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos25"><span>공장주소</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text pos__size-small2" id="pos25" type="text" name="" value="79038" />
+																	<input class="pos__input-text pos__size-small3" id="pos25-1" type="text" name="" value="경상북도 포항시 남구 호동" />
+																	<input class="pos__input-text" id="pos25-2" type="text" name="" value="606" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos26">
+																		<span>주거래은행/지점</span>
+																	</label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text pos__size-small" id="pos26" type="text" name="" value="우리은행" />
+																	<input class="pos__input-text" id="pos26" type="text" name="" value="분당중앙기업고객지원센터" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos27"><span>본사팩스번호</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos27" type="text" name="" value="031-723-2109" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col col-6">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos28"><span>공장주소</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text pos__size-small2" id="pos28" type="text" name="" value="79038" />
+																	<input class="pos__input-text pos__size-small3" id="pos28-1" type="text" name="" value="경상북도 포항시 남구 호동" />
+																	<input class="pos__input-text" id="pos28-2" type="text" name="" value="606" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+													</ul>
+													<!--// pos__grid-row E -->
+													<!-- pos__grid-row S -->
+													<ul class="pos__grid-row">
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos29">
+																		<span>계산서전화번호</span>
+																	</label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos29" type="text" name="" value="031-723-2698" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col">
+															<!-- pos__form-box S -->
+															<dl class="pos__form-box">
+																<dt class="tit">
+																	<label for="pos30"><span>계산서팩스번호</span></label>
+																</dt>
+																<dd>
+																	<input class="pos__input-text" id="pos30" type="text" name="" value="031-723-2109" />
+																</dd>
+															</dl>
+															<!--// pos__form-box E -->
+														</li>
+														<li class="col col-6"></li>
+													</ul>
+													<!--// pos__grid-row E -->
+												</div>
+												<!--// pos__grid E -->
+											</div>
+											<!--// pos__search-cont E -->
+										</div>
+										<!--// pos__search-box E -->
+									</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box1">컨텐츠2</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box2">컨텐츠3</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box3">컨텐츠4</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box4">컨텐츠5</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box5">컨텐츠6</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box6">컨텐츠7</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box7">컨텐츠8</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box8">컨텐츠9</div>
+									<!--// pos__tab-cont E -->
+
+									<!-- pos__tab-cont S -->
+									<div class="pos__tab-cont pd-0 pos__detail-box pos__detail-box9">컨텐츠10</div>
+									<!--// pos__tab-cont E -->
+								</div>
+								<!--// pos__tab-wrap E -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+	</body>
+</html>

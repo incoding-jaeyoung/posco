@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- 서포터바 영역 pos__bar S -->
+			<div class="pos__bar">
+				<button type="button" class="btn__bar-open">
+					<span class="icon-arrowW">열기</span>
+				</button>
+				<!-- pos__bar-box S -->
+				<div class="pos__bar-box">
+					<!-- pos__bar-top S -->
+					<div class="pos__bar-top">
+						<button type="button" class="btn__bar-fix">고정</button>
+						<button type="button" class="btn__bar-fixNO">고정해지</button>
+						<span class="icon-malkanBK">고정</span>
+					</div>
+					<!--// pos__bar-top E -->
+
+					<!-- pos__bar-list S -->
+					<div class="pos__bar-list">
+						<ul>
+							<li>
+								<!--Selected시 li에 class ="action" 추가 -->
+								<button type="button" class="btn__bar-link">
+									<!--알림 내역 있을 경우 new 추가-->
+									<span class="icon-alarm new"><!--알림--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-book-list"><!--리스트--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-chat"><!--체크--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-share"><!--공유--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-info"><!--인포--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+						</ul>
+					</div>
+					<!--// pos__bar-list E -->
+
+					<!-- pos__bar-foot S -->
+					<div class="pos__bar-foot">
+						<button type="button" class="btn__bar-link">
+							<span class="icon-setting"><!--설정--></span>
+						</button>
+						<span class="icon-malkanBK">설정</span>
+					</div>
+					<!--// pos__bar-list E -->
+				</div>
+				<!--// pos__bar-box E -->
+			</div>
+			<!--// 서포터바 영역 pos__bar E -->
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 좌측 영역 pos__side S -->
+				<div class="pos__side">
+					<!-- pos__side-navigation S -->
+					<div class="pos__side-navigation">
+						<!-- pos__tab-list S -->
+						<ul class="pos__tab-list">
+							<li class="action"><span class="icon-meun"></span>전체메뉴</li>
+							<li><span class="icon-favorites"></span>즐겨찾기</li>
+						</ul>
+						<!--// pos__tab-list E -->
+
+						<!-- 좌측 스크롤 영역 pos__scroll S -->
+						<div class="pos__scroll">
+							<!-- 전체메뉴 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- 좌측 검생 영역 pos__side-search S -->
+								<div class="pos__side-search">
+									<label class="Lhide" for="menu-search">메뉴 검색</label>
+									<input type="text" class="pos__input-txt" id="menu-search" placeholder="메뉴 검색" name="" value="" />
+									<button type="button" class="btn__search">검색</button>
+								</div>
+								<!--// 좌측 검생 영역 pos__side-search E -->
+
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side">
+										<li class="action">
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub" style="display: block">
+												<ul>
+													<li class="action">
+														<a href="#" onclick="return false;">메뉴명 1-1-1</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre" style="display: block">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-1</a></li>
+																<li class="action"><a href="#" onclick="return false;">메뉴명 1-1-1-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-2</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-3</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-3<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-4<span class="icon-arrow1"></span></a>
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 전체메뉴 목록 pos__tab-cont E -->
+
+							<!-- 즐겨찾기 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side" id="favoritesList">
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 즐겨찾기 목록 pos__tab-cont E -->
+						</div>
+						<!--// 좌측 스크롤 영역 pos__scroll E -->
+					</div>
+					<!--// pos__side-navigation E -->
+				</div>
+				<!--// 좌측영역 pos__side E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+	</body>
+</html>

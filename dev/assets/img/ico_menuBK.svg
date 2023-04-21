@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="Img / Icon - 09">
+        <path style="fill:rgba(255,255,255,.2);opacity:.001" d="M0 0h24v24H0z"/>
+        <g transform="translate(-425 -135)">
+            <rect data-name="사각형 160619" width="12" height="2" rx="1" transform="translate(434.5 140)"/>
+            <rect data-name="사각형 160620" width="12" height="2" rx="1" transform="translate(434.5 146)"/>
+            <rect data-name="사각형 160623" width="12" height="2" rx="1" transform="translate(434.5 152)"/>
+            <rect data-name="사각형 160621" width="4" height="4" rx="1" transform="translate(428.5 139)"/>
+            <rect data-name="사각형 160622" width="4" height="4" rx="1" transform="translate(428.5 145)"/>
+            <rect data-name="사각형 160624" width="4" height="4" rx="1" transform="translate(428.5 151)"/>
+        </g>
+    </g>
+</svg>

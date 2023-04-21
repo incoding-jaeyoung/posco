@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="opacity:.001;fill:none" d="M0 0h24v24H0z"/>
+    <g transform="translate(0 -1.542)">
+        <circle data-name="타원 20" cx="2" cy="2" r="2" transform="translate(10 3.742)" style="stroke:#123160;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+        <circle data-name="타원 21" cx="2" cy="2" r="2" transform="translate(3 17)" style="stroke:#123160;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+        <circle data-name="타원 22" cx="2" cy="2" r="2" transform="translate(17 17)" style="stroke:#123160;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+        <circle data-name="타원 23" cx="3" cy="3" r="3" transform="translate(9 11)" style="stroke:#123160;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+        <path data-name="패스 7161" d="M12 7v2.285" transform="translate(0 1.229)" style="stroke:#123160;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+        <path data-name="패스 7162" d="m6.7 17.8 2.8-2" style="stroke:#123160;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+        <path data-name="패스 7163" d="m17.3 17.8-2.8-2" style="stroke:#123160;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;fill:none"/>
+    </g>
+</svg>

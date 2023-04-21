@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>환경관리 셋업북</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>PDF</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>첨부파일</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+								<!-- pos__table-layout S -->
+								<div class="pos__table-layout">
+									<!-- pos__layout-left S -->
+									<div class="pos__layout-left col-3" style="position: relative;">
+                                        <button type="button" class="show-grid" style="border: 0; cursor: pointer; position: absolute; right: -16px; top: 0;"><img src="../assets/img/ico_closeB.svg" alt=""></button>
+										<!-- ibsheet S -->
+										<div id="sheetDiv02" style="width: 100%; height: 100%"></div>
+										<script>
+											var ib02 = {
+												//시트 초기화 구문
+												init: {
+													//공통기능 설정 부분
+													Cfg: {
+														SearchMode: 0,
+														MainCol: "Cls",
+                                                        
+													},
+													//중앙(메인) 컬럼 설정
+													Cols: [
+														{ Header: "셋업북", Type: "Text", Name: "Cls", MinWidth: "200", Align: "Left" },
+														{
+															Header: "PDF",
+															Type: "Text",
+															Name: "TextData01",
+															RelWidth: true,
+                                                            Align: "Center",
+														},
+                                                        {
+															Header: "첨부파일",
+															Type: "Button",
+															Name: "TextData02",
+															RelWidth: true,
+                                                            Align: "Center",
+                                                            ButtonWidth: "60",
+                                                            Button:"Html",
+                                                            
+														},
+													],
+												},
+												//시트객체 생성
+												create: function () {
+													var options = this.init;
+
+													options.Events = this.event;
+													IBSheet.create({
+														id: "sheet02", // 생성할 시트의 id
+														el: "sheetDiv02", // 시트를 생성할 Dom 객체 및 id
+														options: options, // 생성될 시트의 속성
+														data: this.data, // 생성될 시트의 정적데이터
+													});
+												},
+												//조회 데이터
+												data: [
+													{
+														Cls: "철거공사",
+														TextData01: "",
+                                                        TextData02: "",
+														Items: [
+                                                            {
+                                                                Cls: "1)환경인허가신고",
+                                                                TextData01: "PDF",
+                                                                TextData02: "<a href='https://www.naver.com/'>첨부파일</a>",
+                                                                TextData02Disabled:0,
+                                                            },
+                                                            {
+                                                                Cls: "2)임시환경담당자 선정",
+                                                                TextData01: "PDF",
+                                                                TextData02: "첨부파일",
+                                                            },
+                                                            {
+                                                                Cls: "3)본사 환경관리 지원",
+                                                                TextData01: "PDF",
+                                                                TextData02: "첨부파일",
+                                                            },
+                                                            {
+                                                                Cls: "4)현장 점검활동 기록",
+                                                                TextData01: "PDF",
+                                                                TextData02: "첨부파일",
+                                                            },
+														],
+													},
+                                                    {
+														Cls: "실착공 -60일",
+														TextData01: "",
+                                                        TextData02: "",
+														Items: [
+                                                            {
+                                                                Cls: "소메뉴",
+                                                                TextData01: "PDF",
+                                                            },
+														],
+													},
+                                                    {
+														Cls: "실착공 -30일",
+														TextData01: "",
+														Items: [
+                                                            {
+                                                                Cls: "소메뉴",
+                                                                TextData01: "PDF",
+                                                            },
+                                                            {
+                                                                Cls: "소메뉴",
+                                                                TextData01: "PDF",
+                                                            },
+                                                            {
+                                                                Cls: "소메뉴",
+                                                                TextData01: "PDF",
+                                                            },
+														],
+													},
+												],
+											};
+											ib02.create();
+										</script>
+										<!--// ibsheet E -->
+									</div>
+									<!--// pos__layout-left E -->
+
+									<!-- pos__layout-left S -->
+									<div class="pos__layout-left col-8" style="background-color: aquamarine; margin-left: 36px;">
+                                        PDF 영역
+									</div>
+									<!--// pos__layout-left E -->
+								</div>
+                                <style>
+                                    .pos__layout-left.col-3.toggle{width:0 !important ; max-width: 0;}
+                                    .pos__layout-left.col-8.toggle{width:100% !important; max-width: 100% !important; margin: 0;}
+                                </style>
+                                <script>
+                                    $(document).ready(function () {
+                                        $(".show-grid").on('click',function(){
+                                            $('.pos__layout-left.col-3').toggleClass('toggle')
+                                            $('.pos__layout-left.col-8').toggleClass('toggle')
+                                        });
+                                        
+                                    });
+                                </script>
+								<!--// pos__table-layout E -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+
+		
+	</body>
+</html>

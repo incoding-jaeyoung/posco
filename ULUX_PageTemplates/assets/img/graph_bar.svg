@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="825" height="169" viewBox="0 0 825 169">
+    <g data-name="그룹 24981">
+        <path transform="translate(93 108)" style="fill:#d3dae6" d="M0 0h732v1H0z"/>
+        <path data-name="bottom_line" transform="translate(93 42)" style="fill:#d3dae6" d="M0 0h732v1H0z"/>
+        <path data-name="bottom_line" transform="translate(93 75)" style="fill:#d3dae6" d="M0 0h732v1H0z"/>
+        <path data-name="bottom_line" transform="translate(93 9)" style="fill:#d3dae6" d="M0 0h732v1H0z"/>
+        <path data-name="bottom_line" transform="translate(93 141)" style="fill:#98a2b3" d="M0 0h732v1H0z"/>
+        <path data-name="Column Divider" transform="translate(93 9)" style="fill:#98a2b3" d="M0 0h1v133H0z"/>
+        <path data-name="Column Divider" transform="translate(824 9)" style="fill:#d3dae6" d="M0 0h1v133H0z"/>
+        <text data-name="10,000,000,000" transform="translate(43 12)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-42.132" y="0">10,000,000,000</tspan></text>
+        <text data-name="5,000,000,000" transform="translate(81 46)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-78.996" y="0">5,000,000,000</tspan></text>
+        <text data-name="2,000,000,000" transform="translate(85 80)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-79.212" y="0">2,000,000,000</tspan></text>
+        <text data-name="1,000,000,000" transform="translate(85 114)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-76.92" y="0">1,000,000,000</tspan></text>
+        <text data-name="0" transform="translate(78 148)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-7.152" y="0">0</tspan></text>
+        <g data-name="그룹 24928">
+            <text data-name="1월" transform="translate(126 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-7.812" y="0">1월</tspan></text>
+            <text data-name="2월" transform="translate(189 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.712" y="0">2월</tspan></text>
+            <text data-name="3월" transform="translate(245 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.88" y="0">3월</tspan></text>
+            <text data-name="4월" transform="translate(307 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.928" y="0">4월</tspan></text>
+            <text data-name="5월" transform="translate(369 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.76" y="0">5월</tspan></text>
+            <text data-name="6월" transform="translate(424 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.868" y="0">6월</tspan></text>
+            <text data-name="7월" transform="translate(485 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.496" y="0">7월</tspan></text>
+            <text data-name="8월" transform="translate(546 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.82" y="0">8월</tspan></text>
+            <text data-name="9월" transform="translate(609 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-8.868" y="0">9월</tspan></text>
+            <text data-name="10월" transform="translate(669 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-11.388" y="0">10월</tspan></text>
+            <text data-name="11월" transform="translate(729 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-10.44" y="0">11월</tspan></text>
+            <text data-name="12월" transform="translate(789 166)" style="font-size:12px;font-family:Pretendard-Regular,Pretendard;fill:#98a2b3"><tspan x="-11.34" y="0">12월</tspan></text>
+        </g>
+        <g data-name="그룹 24657">
+            <path data-name="사각형 159232" transform="translate(117 67)" style="fill:#469bef" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159233" transform="translate(177 67)" style="fill:#1e52a0" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159234" transform="translate(237 67)" style="fill:#00c7e6" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159232" transform="translate(297 67)" style="fill:#469bef" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159233" transform="translate(357 67)" style="fill:#1e52a0" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159234" transform="translate(417 67)" style="fill:#00c7e6" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159232" transform="translate(477 67)" style="fill:#469bef" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159233" transform="translate(537 67)" style="fill:#1e52a0" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159234" transform="translate(597 67)" style="fill:#00c7e6" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159232" transform="translate(657 67)" style="fill:#469bef" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159233" transform="translate(717 67)" style="fill:#1e52a0" d="M0 0h24v75H0z"/>
+            <path data-name="사각형 159234" transform="translate(777 67)" style="fill:#00c7e6" d="M0 0h24v75H0z"/>
+        </g>
+    </g>
+</svg>

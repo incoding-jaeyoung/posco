@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:#fff;opacity:.001" d="M0 0h24v24H0z"/>
+    <g transform="translate(14.5 4.814)">
+        <path data-name="Vector 2186" d="M5.322.5H2.786A2.286 2.286 0 0 0 .5 2.786v2.285A11.429 11.429 0 0 0 11.929 16.5h2.286a2.286 2.286 0 0 0 2.285-2.286v-1.579a1.143 1.143 0 0 0-.632-1.022l-2.761-1.381a1.143 1.143 0 0 0-1.6.661l-.34 1.021a1.382 1.382 0 0 1-1.582.918 6.911 6.911 0 0 1-5.417-5.421 1.382 1.382 0 0 1 .918-1.582l1.267-.422A1.143 1.143 0 0 0 7.1 4.045l-.67-2.679A1.143 1.143 0 0 0 5.322.5z" transform="translate(-11.5 -.35)" style="stroke-width:1.8px;fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round"/>
+        <circle data-name="타원 24" cx="4" cy="4" r="4" transform="translate(-.5 -2.814)" style="stroke-width:1.5px;fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round"/>
+        <path data-name="패스 7165" d="M0 0v1.645" transform="rotate(180 1.75 1.415)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round"/>
+        <path data-name="패스 7166" d="M0 0h0" transform="rotate(180 1.75 -.157)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round"/>
+    </g>
+</svg>

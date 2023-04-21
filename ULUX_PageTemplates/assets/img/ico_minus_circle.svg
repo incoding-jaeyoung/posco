@@ -1,0 +1,8 @@
+<svg data-name="Minus - circle_16px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <path style="opacity:.001;fill:none" d="M0 0h16v16H0z"/>
+    <g data-name="타원 85" transform="translate(1 1)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none">
+        <circle cx="7" cy="7" r="7" style="stroke:none"/>
+        <circle cx="7" cy="7" r="6.25" style="fill:none"/>
+    </g>
+    <path data-name="패스 9715" d="M12 8v5.034" transform="rotate(90 11.267 7.267)" style="stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+</svg>

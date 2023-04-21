@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>타이틀</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>버튼</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>버튼</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>조회</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>조회</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__more">
+												<span class="icon-more"><!-- 토글버튼 --></span>
+											</button>
+											<!-- pos__list-dropdown S -->
+											<div class="pos__list-dropdown">
+												<ul>
+													<li>
+														<button type="button" class="btn__link"><span>기능메뉴1</span></button>
+													</li>
+													<li>
+														<button type="button" class="btn__link"><span>기능메뉴2</span></button>
+													</li>
+													<li>
+														<button type="button" class="btn__link"><span>기능메뉴3</span></button>
+													</li>
+													<li>
+														<button type="button" class="btn__link"><span>기능메뉴4</span></button>
+													</li>
+													<li>
+														<button type="button" class="btn__link"><span>기능메뉴5</span></button>
+													</li>
+													<li>
+														<button type="button" class="btn__link"><span>기능메뉴6</span></button>
+													</li>
+												</ul>
+											</div>
+											<!--// pos__list-dropdown E -->
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- 컨텐츠 작성 -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+
+		<!-- 팝업 -->
+		<div id="popup-favorites" class="pos__popup-favorites" title="즐겨찾기 추가">
+			<div class="pos__popup-contents">
+				<!-- pos__popup-box S -->
+				<div class="pos__popup-box">
+					<p class="pd-t24">즐겨찾기에 추가합니다.</p>
+
+					<!-- pos__form-box S -->
+					<dl class="pos__form-box">
+						<dt class="tit">
+							<label for="favorites"><span>폴더</span></label>
+						</dt>
+						<dd>
+							<select class="pos__select" data-placeholder="선택" id="favorites" data-placeholder="선택">
+								<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+								<option>폴더명 1</option>
+								<option>폴더명 2</option>
+								<option>폴더명 3</option>
+							</select>
+						</dd>
+					</dl>
+					<!--// pos__form-box E -->
+				</div>
+				<!--// pos__popup-box E -->
+			</div>
+			<div class="pos__popup-footer">
+				<button type="button" class="btn__basic" onclick='$("#popup-favorites").dialog("close");'><span>취소</span></button>
+				<button type="button" class="btn__basic color-blue"><span>확인</span></button>
+			</div>
+		</div>
+		<!-- //팝업 -->
+	</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+		<script>
+			$(document).ready(function () {
+				setTimeout(() => {
+					$("#popup").dialog("open");
+				}, 1200);
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 팝업 -->
+		<div id="popup" class="pos__popup" title="환경 측면식별 상세">
+			<div class="pos__popup-contents">
+				<div class="pos__popup-box">
+                    <div class="pos__search-box">
+                        <!-- pos__search-cont S -->
+                        <div class="pos__search-cont">
+                            <!-- pos__grid S -->
+                            <div class="pos__grid">
+                                <!-- pos__grid-row S -->
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos1"><span>진행상태</span></label>
+                                            </dt>
+                                            <dd>
+                                                <input class="pos__input-text" id="pos8" type="text" name="" value="1차완료" disabled>
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                </ul>
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos1"><span>공사공종</span></label>
+                                            </dt>
+                                            <dd>
+                                                <select class="pos__select" data-placeholder="선택" id="pos1">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                                <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>선택</option>
+                                                    <option>선택</option>
+                                                    <option>선택</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                </ul>
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos1"><span>분류체계</span></label>
+                                            </dt>
+                                            <dd>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                                <select class="pos__select" data-placeholder="전체" id="pos4">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>비산먼지</option>
+                                                    <option>선택</option>
+                                                    <option>선택</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                </ul>
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos5">
+                                                    <span>공사기간</span>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <!-- pos__input-day S -->
+                                                <div class="pos__input-day">
+                                                    <input
+                                                        class="pos__input-text hasDatepicker"
+                                                        type="text"
+                                                        name="pos5_fromID"
+                                                        id="pos5_fromID"
+                                                        date="pos5_FromYMD"
+                                                        date_ref="pos5_toID"
+                                                        placeholder="YYYY/MM/DD"
+                                                    />
+                                                    <button class="btn__day" onclick='IBSheet.v7.IBS_FromToCalendar("pos5_fromID","yyyy/MM/dd")'>달력</button>
+                                                </div>
+                                                <!--// pos__input-day E -->
+                                                <span class="icon-wave"><!--~--></span>
+                                                <!-- pos__input-day S -->
+                                                <div class="pos__input-day">
+                                                    <input
+                                                        class="pos__input-text hasDatepicker"
+                                                        type="text"
+                                                        name="pos5_toID"
+                                                        id="pos5_toID"
+                                                        date="pos5_ToYMD"
+                                                        date_ref="pos5_fromID"
+                                                        placeholder="YYYY/MM/DD"
+                                                    />
+                                                    <button class="btn__day" onclick='IBSheet.v7.IBS_FromToCalendar("pos5_toID","yyyy/MM/dd")'>달력</button>
+                                                </div>
+                                                <!--// pos__input-day E -->
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                </ul>
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos5">
+                                                    <span>발생기간</span>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <!-- pos__input-day S -->
+                                                <div class="pos__input-day">
+                                                    <input
+                                                        class="pos__input-text hasDatepicker"
+                                                        type="text"
+                                                        name="pos5_fromID_1"
+                                                        id="pos5_fromID_1"
+                                                        date="pos5_FromYMD"
+                                                        date_ref="pos5_toID"
+                                                        placeholder="YYYY/MM/DD"
+                                                    />
+                                                    <button class="btn__day" onclick='IBSheet.v7.IBS_FromToCalendar("pos5_fromID_1","yyyy/MM/dd")'>달력</button>
+                                                </div>
+                                                <!--// pos__input-day E -->
+                                                <span class="icon-wave"><!--~--></span>
+                                                <!-- pos__input-day S -->
+                                                <div class="pos__input-day">
+                                                    <input
+                                                        class="pos__input-text hasDatepicker"
+                                                        type="text"
+                                                        name="pos5_toID_1"
+                                                        id="pos5_toID_1"
+                                                        date="pos5_ToYMD"
+                                                        date_ref="pos5_fromID"
+                                                        placeholder="YYYY/MM/DD"
+                                                    />
+                                                    <button class="btn__day" onclick='IBSheet.v7.IBS_FromToCalendar("pos5_toID_1","yyyy/MM/dd")'>달력</button>
+                                                </div>
+                                                <!--// pos__input-day E -->
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                    
+                                </ul>
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos5">
+                                                    <span>환경오염원인<br>및 과정</span>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <div class="pos__textarea-box">
+                                                <textarea name="" id="" cols="30" rows="10" class="pos__textarea"></textarea>
+                                            </div>
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                    
+                                </ul>
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos5">
+                                                    <span>관리방안</span>
+                                                </label>
+                                            </dt>
+                                            <dd>
+                                                <div class="pos__textarea-box">
+                                                <textarea name="" id="" cols="30" rows="10" class="pos__textarea"></textarea>
+                                            </div>
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                    
+                                </ul>
+                                <ul class="pos__grid-row">
+                                    <li class="col">
+                                        <!-- pos__form-box S -->
+                                        <dl class="pos__form-box">
+                                            <dt class="tit">
+                                                <label for="pos1"><span>담당자(CE)</span></label>
+                                            </dt>
+                                            <dd>
+                                                <input class="pos__input-text pos__size-small3" id="" type="text" name="" value="109095">
+                                                <!-- pos__search S -->
+                                                <div class="pos__search mg-l6">
+                                                    <input class="pos__input-text" id="pos1-1" type="text" name="" value="홍길동">
+                                                    <button type="button" class="btn__search">
+                                                        <span><!--검색--></span>
+                                                    </button>
+                                                </div>
+                                                <!--// pos__search E -->
+                                            </dd>
+                                        </dl>
+                                        <!--// pos__form-box E -->
+                                    </li>
+                                    
+                                </ul>
+                                <!-- pos__table-box--new S -->
+                                <div class="pos__table-box--new" style="margin-top: 10px;">
+                                    <div id="sheetDiv04" style="width: 100%; height: 100%"></div>
+                                </div>
+                                <!--// pos__table-box--new E -->
+                                <script>
+                                    var ib04 = {
+                                        //시트 초기화 구문
+                                        init: {
+                                            Cfg: {
+                                                //CanSort: false,
+                                                InfoRowConfig: {
+                                                    Visible: false,
+                                                },
+                                                //Hover: "0",
+                                                //FocusWholeRow: true,
+                                            },
+                                            //중앙(메인) 컬럼 설정
+                                            Cols: [
+                                                { Header: "시설물명", Type: "Text", Name: "TextData01", RelWidth: true },
+                                                { Header:{ Value: "선택", HeaderCheck: 0 }, Type: "Bool", Name: "CheckData", Align: "Center" },
+                                            ],
+                                        },
+                                        //시트객체 생성
+                                        create: function () {
+                                            var options = this.init;
+                            
+                                            options.Events = this.event;
+                                            IBSheet.create({
+                                                id: "sheet04", // 생성할 시트의 id
+                                                el: "sheetDiv04", // 시트를 생성할 Dom 객체 및 id
+                                                options: options, // 생성될 시트의 속성
+                                                data: this.data, // 생성될 시트의 정적데이터
+                                            });
+                                        },
+                                        //화면 기능
+                                        sampleBtn: function () {},
+                                        //조회 데이터
+                                        data: [
+                                            {
+                                                TextData01: "방진벽",
+                                                CheckData: true,
+                                            },
+                                            {
+                                                TextData01: "분진망",
+                                                CheckData: true,
+                                            },
+                                            {
+                                                TextData01: "방진벽",
+                                                CheckData: true,
+                                            },
+                                            {
+                                                TextData01: "분진망",
+                                                CheckData: true,
+                                            },
+                                            {
+                                                TextData01: "방진벽",
+                                                CheckData: true,
+                                            },
+                                            {
+                                                TextData01: "분진망",
+                                                CheckData: true,
+                                            },
+                                        ],
+                                    };
+                                    ib04.create();
+                                </script>
+                            </div>
+                            <!--// pos__grid E -->
+                        </div>
+                        <!--// pos__search-cont E -->
+                    </div>
+                    <!--// pos__search-box E -->
+				</div>
+			</div>
+			<div class="pos__popup-footer">
+				<button type="button" class="btn__basic color-blue" onclick=''><span>저장</span></button>
+				<button type="button" class="btn__basic color-blue" onclick='$("#popup").dialog("close");'><span>닫기</span></button>
+			</div>
+		</div>
+		<!-- //팝업 -->
+        <!-- ibsheet S -->
+        <div id="sheetDiv02" style="width: 100%; height: 100% ;display: none;"></div>
+        <script>
+            var ib02 = {
+                //시트 초기화 구문
+                init: {
+                    Cols: [
+                        { Header: "순번", Type: "Int", Name: "IntData01", Align: "Center" },
+                    ],
+                },
+                //시트객체 생성
+                create: function () {
+                    var options = this.init;
+                    IBSheet.create({
+                        el: "sheetDiv02", // 시트를 생성할 Dom 객체 및 id
+                        options: options, // 생성될 시트의 속성
+                        data: this.data, // 생성될 시트의 정적데이터
+                    });
+                },
+                //화면 기능
+                sampleBtn: function () {},
+                //조회 데이터
+            };
+            ib02.create();
+        </script>
+        <!--// ibsheet E -->
+	</body>
+</html>

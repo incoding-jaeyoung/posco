@@ -1,0 +1,12 @@
+<svg data-name="Menu Left" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:rgba(255,255,255,.2);opacity:.001" d="M0 0h24v24H0z"/>
+    <g transform="translate(10 7)">
+        <rect data-name="사각형 159457" width="6" height="2" rx="1" transform="rotate(180 6 6.5)"/>
+        <path data-name="패스 102878" d="M7.5 3.861 4.449 1S2.76 3.152 1.9 4" transform="rotate(-90 10.351 6.351)" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+    </g>
+    <g data-name="Shape" transform="translate(-426 -133)">
+        <rect data-name="사각형 159456" width="20" height="2" rx="1" transform="translate(428 137)"/>
+        <rect data-name="사각형 159457" width="20" height="2" rx="1" transform="translate(428 144)"/>
+        <rect data-name="사각형 159458" width="10" height="2" rx="1" transform="translate(428 151)"/>
+    </g>
+</svg>

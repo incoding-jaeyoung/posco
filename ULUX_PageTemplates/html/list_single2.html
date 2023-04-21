@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- 헤더 영역 pos__header S -->
+			<header id="header" class="pos__header">
+				<!-- 로고 영역 pos__header-logo S -->
+				<div class="pos__header-logo">
+					<button type="button" class="btn__menu-all" id="closeAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<button type="button" class="btn__menu-all" id="openAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<!-- 로고 pos__header-logo S -->
+					<div class="pos__logo">
+						<h1>e-Procurement</h1>
+						구매관리시스템
+					</div>
+					<!--// 로고 pos__header-logo E -->
+				</div>
+				<!--// 로고 pos__header-logo E -->
+
+				<!-- 상단 메뉴 영역 pos__header-navigation S -->
+				<div class="pos__header-navigation">
+					<!-- pos__navigation-top S -->
+					<nav class="pos__navigation-top">
+						<ul>
+							<li class="action">
+								<!-- 활성화시 class="action" -->
+								<a href="#" onclick="return false;"><span>메뉴명1</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명2</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명3</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명4</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명5</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명6</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명7</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명8</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명9</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명10</span></a>
+							</li>
+						</ul>
+					</nav>
+					<!--// pos__navigation-top E -->
+
+					<section>
+						<div class="pos__header-project">
+							<select class="pos__select" data-placeholder="선택">
+								<option>프로젝트명1</option>
+								<option>프로젝트명2</option>
+								<option>프로젝트명3</option>
+								<option>프로젝트명4</option>
+								<option>프로젝트명5</option>
+							</select>
+						</div>
+
+						<div class="pos__header-search">
+							<label class="Lhide" for="menu-search">검색</label>
+							<input type="text" class="pos__input-txt" id="menu-search" placeholder="검색어를 입력하세요" name="" value="" />
+							<button type="button" class="btn__search">검색</button>
+						</div>
+						<hr />
+						<!-- pos__magnifying S -->
+						<div class="pos__magnifying">
+							<!-- pos__form-box S -->
+							<dl class="pos__form-box">
+								<dt class="tit">
+									<label for="magnifying">
+										<span>화면배율</span>
+										<span class="icon-infoB2"><!--안내--></span>
+										<span class="icon-malkanBK textL"
+											>브라우저에서 설정한 화별배율 조정 기능과는 별개로<br />시스템 화면의 화면 배율을 조정하여 사용할 수 있습니다.</span
+										>
+									</label>
+								</dt>
+								<dd>
+									<select class="pos__select" data-placeholder="선택" id="magnifying">
+										<option value="150">150%</option>
+										<option value="125">125%</option>
+										<option value="110">110%</option>
+										<option value="100" selected>100%</option>
+										<option value="90">90%</option>
+										<option value="80">80%</option>
+										<option value="75">75%</option>
+									</select>
+								</dd>
+							</dl>
+							<!--// pos__form-box E -->
+						</div>
+						<!--// pos__magnifying -->
+					</section>
+				</div>
+				<!--// 상단 메뉴 pos__header-navigation E -->
+			</header>
+			<!--// 헤더 영역 pos__header E -->
+
+			<!-- 서포터바 영역 pos__bar S -->
+			<div class="pos__bar">
+				<button type="button" class="btn__bar-open">
+					<span class="icon-arrowW">열기</span>
+				</button>
+				<!-- pos__bar-box S -->
+				<div class="pos__bar-box">
+					<!-- pos__bar-top S -->
+					<div class="pos__bar-top">
+						<button type="button" class="btn__bar-fix">고정</button>
+						<button type="button" class="btn__bar-fixNO">고정해지</button>
+						<span class="icon-malkanBK">고정</span>
+					</div>
+					<!--// pos__bar-top E -->
+
+					<!-- pos__bar-list S -->
+					<div class="pos__bar-list">
+						<ul>
+							<li>
+								<!--Selected시 li에 class ="action" 추가 -->
+								<button type="button" class="btn__bar-link">
+									<!--알림 내역 있을 경우 new 추가-->
+									<span class="icon-alarm new"><!--알림--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-book-list"><!--리스트--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-chat"><!--체크--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-share"><!--공유--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-info"><!--인포--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+						</ul>
+					</div>
+					<!--// pos__bar-list E -->
+
+					<!-- pos__bar-foot S -->
+					<div class="pos__bar-foot">
+						<button type="button" class="btn__bar-link">
+							<span class="icon-setting"><!--설정--></span>
+						</button>
+						<span class="icon-malkanBK">설정</span>
+					</div>
+					<!--// pos__bar-list E -->
+				</div>
+				<!--// pos__bar-box E -->
+			</div>
+			<!--// 서포터바 영역 pos__bar E -->
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 좌측 영역 pos__side S -->
+				<div class="pos__side">
+					<!-- pos__side-navigation S -->
+					<div class="pos__side-navigation">
+						<!-- pos__tab-list S -->
+						<ul class="pos__tab-list">
+							<li class="action"><span class="icon-meun"></span>전체메뉴</li>
+							<li><span class="icon-favorites"></span>즐겨찾기</li>
+						</ul>
+						<!--// pos__tab-list E -->
+
+						<!-- 좌측 스크롤 영역 pos__scroll S -->
+						<div class="pos__scroll">
+							<!-- 전체메뉴 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- 좌측 검생 영역 pos__side-search S -->
+								<div class="pos__side-search">
+									<label class="Lhide" for="menu-search">메뉴 검색</label>
+									<input type="text" class="pos__input-txt" id="menu-search" placeholder="메뉴 검색" name="" value="" />
+									<button type="button" class="btn__search">검색</button>
+								</div>
+								<!--// 좌측 검생 영역 pos__side-search E -->
+
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side">
+										<li class="action">
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub" style="display: block">
+												<ul>
+													<li class="action">
+														<a href="#" onclick="return false;">메뉴명 1-1-1</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre" style="display: block">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-1</a></li>
+																<li class="action"><a href="#" onclick="return false;">메뉴명 1-1-1-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-2</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-3</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-3<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-4<span class="icon-arrow1"></span></a>
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 전체메뉴 목록 pos__tab-cont E -->
+
+							<!-- 즐겨찾기 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side" id="favoritesList">
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 즐겨찾기 목록 pos__tab-cont E -->
+						</div>
+						<!--// 좌측 스크롤 영역 pos__scroll E -->
+					</div>
+					<!--// pos__side-navigation E -->
+				</div>
+				<!--// 좌측영역 pos__side E -->
+
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>기성/준공지급</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>텍스트</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>기성/준공지금</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>조회</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__search-box S -->
+								<div class="pos__search-box">
+									<!-- pos__search-cont S -->
+									<div class="pos__search-cont">
+										<!-- pos__grid S -->
+										<div class="pos__grid">
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos1"><span>프로젝트 코드</span></label>
+														</dt>
+														<dd><input class="pos__input-text" id="pos1" type="text" name="" value="" placeholder="계약명" /></dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col col-6">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos2"><span>프로젝트명</span></label>
+														</dt>
+														<dd><input class="pos__input-text" id="pos2" type="text" name="" value="" placeholder="계약명" /></dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos3"><span>기성기준일자</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos3">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+											</ul>
+											<!--// pos__grid-row E -->
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos4"><span>계약유형</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos4">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos5"><span>진행상태</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos5">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos6"><span>준공건</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos6">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos7"><span>지역</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos7">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+											</ul>
+											<!--// pos__grid-row E -->
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos8"><span>세금계산서</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos8">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos9"><span>ERP</span></label>
+														</dt>
+														<dd>
+															<select class="pos__select" data-placeholder="선택" id="pos9">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>선택</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												<li class="col-6"></li>
+											</ul>
+											<!--// pos__grid-row E -->
+										</div>
+										<!--// pos__grid E -->
+									</div>
+									<!--// pos__search-cont E -->
+									<!-- pos__search-right S -->
+									<div class="pos__search-right">
+										<!-- pos__btn-box S -->
+										<div class="pos__btn-box">
+											<button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+										</div>
+										<!--// pos__btn-box E -->
+									</div>
+									<!--// pos__search-right E -->
+								</div>
+								<!--// pos__search-box E -->
+
+								<!-- pos__table-top S -->
+								<div class="pos__table-top">
+									<!-- pos__table-quantity S -->
+									<div class="pos__table-quantity">조회결과 <strong>150</strong>건</div>
+									<!--// pos__table-quantity E -->
+									<!-- pos__btn-box S -->
+									<div class="pos__btn-box">
+										<button type="button" class="btn__small color-orange2"><span>메시지관리</span></button>
+										<button type="button" class="btn__small color-blue2"><span>엑셀다운로드</span></button>
+										<button type="button" class="btn__small color-blue2"><span>지급요청</span></button>
+										<button type="button" class="btn__small color-blue2"><span>결제요청</span></button>
+										<button type="button" class="btn__small color-blue2"><span>SMS</span></button>
+									</div>
+									<!--// pos__btn-box E -->
+								</div>
+								<!--// pos__table-top E -->
+
+								<!-- pos__table-box--new S -->
+								<div class="pos__table-box--new" style="height: 600px">
+									<div id="sheetDiv01_1" style="height: 100%"></div>
+								</div>
+								<!--// pos__table-box--new E -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+	</body>
+
+	<script>
+		var ib01_1 = {
+			//시트 초기화 구문
+			init: {
+				Cfg: {
+					InfoRowConfig: {
+						Visible: false,
+					},
+					//Hover: "0",
+					//FocusWholeRow: true,
+				},
+				//중앙(메인) 컬럼 설정
+				Cols: [
+					{ Header: { Value: "", HeaderCheck: 1 }, Type: "Bool", Name: "CheckData", Align: "Center" },
+					{ Header: "진행상태", Type: "Text", Name: "TextData01", Width: 90, Align: "Center" },
+					{ Header: "발주코드", Type: "Text", Name: "TextData02", Width: 100, Align: "Center" },
+					{ Header: "발주공종명", Type: "Text", Name: "TextData03", Width: 110, Align: "Center" },
+					{ Header: "계약번호", Type: "Text", Name: "TextData04", Width: 100, Align: "Center" },
+					{ Header: "기성차수", Type: "Text", Name: "TextData05", Width: 95, Align: "Center" },
+					{ Header: "계약명", Type: "Text", Name: "TextData06", RelWidth: true, Align: "Left" },
+					{ Header: "협력업체명", Type: "Text", Name: "TextData07", Width: 100, Align: "Center" },
+					{ Header: "국가명", Type: "Text", Name: "TextData08", Width: 68, Align: "Center" },
+					{ Header: "수금일", Type: "Text", Name: "TextData09", Width: 80, Align: "Center" },
+				],
+			},
+			//시트객체 생성
+			create: function () {
+				var options = this.init;
+
+				options.Events = this.event;
+				IBSheet.create({
+					id: "sheet01_1", // 생성할 시트의 id
+					el: "sheetDiv01_1", // 시트를 생성할 Dom 객체 및 id
+					options: options, // 생성될 시트의 속성
+					data: this.data, // 생성될 시트의 정적데이터
+				});
+			},
+			//조회 데이터
+			data: [
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+				{
+					CheckData: true,
+					TextData01: "대기",
+					TextData02: "F005",
+					TextData03: "전기/계장(M)",
+					TextData04: "2003TS020",
+					TextData05: "2",
+					TextData06: "(베)Thai Bnh General Trade CGL/CCL",
+					TextData07: "(주)동우기술",
+					TextData08: "대한민국",
+					TextData09: "2022/07/20",
+				},
+			],
+		};
+		ib01_1.create();
+	</script>
+</html>

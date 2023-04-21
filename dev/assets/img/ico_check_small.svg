@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <path style="fill:rgba(255,255,255,.2);opacity:.001" d="M0 0h16v16H0z"/>
+    <circle data-name="타원 6" cx="8" cy="8" r="8"/>
+    <path data-name="check" d="M1 2.538 3.286 5 7 1" transform="translate(4 5)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2px"/>
+</svg>

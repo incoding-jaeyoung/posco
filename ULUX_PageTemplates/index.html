@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<title>포스코 PATH</title>
+		<style type="text/css">
+			html,
+			body {
+				background-color: transparent !important;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				letter-spacing: 0;
+				box-sizing: border-box;
+				font-family: "Pretendard", "Noto Sans KR", sans-serif;
+			}
+			a {
+				color: #000;
+				text-decoration: none;
+			}
+			ul,
+			li,
+			ol {
+				list-style-type: none;
+			}
+			.title {
+				background: #1e52a0;
+				padding: 14px 10px;
+				line-height: 24px;
+				color: #fff;
+				font-size: 22px;
+				padding-left: 10px;
+				font-weight: 600 !important;
+			}
+			.path-wrap {
+				padding-bottom: 16px;
+			}
+			.all {
+				position: sticky;
+				top: 0;
+				left: 0;
+				background: #fff;
+				z-index: 99999;
+				border-bottom: 1px solid #ddd;
+				width: 100%;
+				padding: 5px 16px;
+				margin-bottom: 16px;
+				font-size: 0;
+			}
+			.all li {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				padding: 9px 10px;
+				font-size: 0;
+			}
+			.all li::after {
+				content: "";
+				position: absolute;
+				top: 25%;
+				left: 0;
+				width: 1px;
+				height: 50%;
+				background-color: #ddd;
+			}
+			.all li:first-child::after {
+				display: none;
+			}
+			.all li a {
+				font-size: 14px;
+				font-weight: 500;
+			}
+			.all li:hover {
+				background-color: #f4f4f4;
+			}
+			.all li:hover a {
+				font-weight: 600;
+			}
+			.pos__table-box {
+				position: relative;
+				border-radius: 0 !important;
+				margin: 0 16px;
+				border: 1px solid #e0e0e0;
+			}
+			.pos__table-box .lineL {
+				border-left: 1px solid #e0e0e0 !important;
+			}
+			.pos__table-box .nolineB {
+				border-bottom: none !important;
+			}
+			table {
+				position: relative;
+				z-index: 5;
+			}
+			table h2 {
+				font-weight: 500 !important;
+				font-size: 16px;
+			}
+			table tr th {
+				min-height: 30px !important;
+				line-height: 16px !important;
+				padding: 7px 12px !important;
+				font-size: 12px !important;
+			}
+			table tr td {
+				min-height: 24px !important;
+				line-height: 20px !important;
+				padding: 4px 12px !important;
+				font-size: 13px !important;
+				font-weight: 400 !important;
+			}
+			table tr:hover td,
+			table tr:hover th {
+				background-color: #f8f8f8;
+			}
+			table tr:hover td::after {
+				display: none !important;
+			}
+			table tr a {
+				color: #000 !important;
+			}
+			table tr td.bg__gray {
+				font-weight: 600;
+			}
+		</style>
+		<script type="text/javascript" src="../../resource/web/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$("div>ul>li").hover(
+					function () {
+						$(this).addClass("on");
+					},
+					function () {
+						$(this).removeClass("on");
+					}
+				);
+			});
+		</script>
+		<link rel="stylesheet" href="../../resource/web/assets/css/pos-style.css" />
+	</head>
+
+	<body>
+		<div class="path-wrap">
+			<h1 class="title">포스코 PATH</h1>
+			<ul class="all">
+				<li><a href="#0">Common</a> |</li>
+				<li><a href="#1">Dashboard</a> |</li>
+				<li><a href="#2">화면 유형 정의</a> |</li>
+				<li><a href="#3">팝업</a> |</li>
+				<!--<li><a href="#6">결제 관리</a> |</li>
+				<li><a href="#7">결제 패턴</a> |</li>
+				<li><a href="#8">결제 트랜드</a> |</li>
+				<li><a href="#16">보험 청구</a> |</li>
+				<li><a href="#9">더보기</a> |</li>
+				<li><a href="#10">공지사항</a> |</li>
+				<li><a href="#11">문의하기</a> |</li>
+				<li><a href="#12">약관및정책</a> |</li>
+				<li><a href="#13">내정보</a> |</li>
+				<li><a href="#14">알림</a> |</li>
+				<li><a href="#15">메인</a> |</li>-->
+			</ul>
+
+			<div class="pos__table-box">
+				<table class="pos__table">
+					<colgroup>
+						<col style="width: 10%" />
+						<col style="width: 10%" />
+						<col />
+						<col style="width: 10%" />
+						<col style="width: 5%" />
+						<col style="width: 10%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>분류</th>
+							<th>페이지명</th>
+							<th>페이지명2</th>
+							<th>URL</th>
+							<th>진행 여부</th>
+							<th>업데이트 날짜</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2" class="textL bg__gray" id="0">Common</td>
+							<td class="textL">layout</td>
+							<td class="textL"></td>
+							<td class="textC"><a href="./html/layout.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">layout - iframe</td>
+							<td class="textL">컨텐츠 영역에 ifame을 넣을 경우 참고해주세요.</td>
+							<td class="textC"><a href="./html/layout_iframe.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL bg__gray" id="1">Dashboard</td>
+							<td class="textL">Dashboard</td>
+							<td class="textL"></td>
+							<td class="textC"><a href="./html/dashboard.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td rowspan="22" class="textL bg__gray" id="2">화면 유형 정의</td>
+							<td rowspan="4" class="textL">단일형</td>
+							<td class="textL">예제</td>
+							<td class="textC"><a href="./html/list_single1.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_single2.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/list_single3.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_single4.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td rowspan="12" class="textL lineL">복합형</td>
+							<td class="textL">예제</td>
+							<td class="textC"><a href="./html/list_complex1.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_complex2.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/list_complex3.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_complex4.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/list_complex5.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_complex6.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/list_complex7.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_complex8.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/list_complex9.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_complex10.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/list_complex11.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/list_complex12.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td rowspan="6" class="textL lineL">상세내역</td>
+							<td class="textL">예제</td>
+							<td class="textC"><a href="./html/detail1.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/detail2.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/detail3.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/detail4.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예제</td>
+							<td class="textC"><a href="./html/detail5.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL"></td>
+							<td class="textC"><a href="./html/detail6.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL bg__gray" rowspan="6" id="3">팝업</td>
+							<td class="textL" rowspan="3">중앙팝업</td>
+							<td class="textL">얼럿 타입(Alert Type)</td>
+							<td class="textC"><a href="./html/popup1_1.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">컨펌 타입(Confirm Type)</td>
+							<td class="textC"><a href="./html/popup1_2.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">예외 타입(Exception Type</td>
+							<td class="textC"><a href="./html/popup1_3.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL">슬라이딩 팝업</td>
+							<td class="textL"></td>
+							<td class="textC"><a href="./html/popup2.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL radius0">다중 팝업</td>
+							<td class="textL"></td>
+							<td class="textC"><a href="./html/popup3.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+						<tr>
+							<td class="textL lineL radius0">토스트 팝업</td>
+							<td class="textL"></td>
+							<td class="textC"><a href="./html/popup4.html" target="_blank">페이지 보기</a></td>
+							<td class="textC">○</td>
+							<td class="textC">2022.09.15</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

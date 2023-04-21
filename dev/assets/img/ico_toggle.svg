@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <path style="opacity:.004;fill:none" d="M0 0h16v16H0z"/>
+    <g data-name="타원 71" transform="translate(1 1)" style="stroke:#4e5a70;stroke-width:1.3px;fill:none">
+        <circle cx="7" cy="7" r="7" style="stroke:none"/>
+        <circle cx="7" cy="7" r="6.35" style="fill:none"/>
+    </g>
+    <path d="m10.809 6.1-2.5-2a.493.493 0 0 0-.618 0l-2.5 2a.516.516 0 0 0-.084.715.494.494 0 0 0 .7.086L8 5.148 10.191 6.9a.494.494 0 0 0 .7-.086.516.516 0 0 0-.084-.715zm-5 3a.494.494 0 0 0-.7.086.516.516 0 0 0 .084.716l2.5 2a.493.493 0 0 0 .618 0l2.5-2a.516.516 0 0 0 .084-.716.494.494 0 0 0-.7-.086L8 10.853 5.809 9.1z" style="fill:#525e74;fill-rule:evenodd"/>
+</svg>

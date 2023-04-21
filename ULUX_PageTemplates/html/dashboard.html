@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- 헤더 영역 pos__header S -->
+			<header id="header" class="pos__header">
+				<!-- 로고 영역 pos__header-logo S -->
+				<div class="pos__header-logo">
+					<button type="button" class="btn__menu-all" id="closeAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<button type="button" class="btn__menu-all" id="openAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<!-- 로고 pos__header-logo S -->
+					<div class="pos__logo">
+						<h1>e-Procurement</h1>
+						구매관리시스템
+					</div>
+					<!--// 로고 pos__header-logo E -->
+				</div>
+				<!--// 로고 pos__header-logo E -->
+
+				<!-- 상단 메뉴 영역 pos__header-navigation S -->
+				<div class="pos__header-navigation">
+					<!-- pos__navigation-top S -->
+					<nav class="pos__navigation-top">
+						<ul>
+							<li class="action">
+								<!-- 활성화시 class="action" -->
+								<a href="#" onclick="return false;"><span>메뉴명1</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명2</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명3</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명4</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명5</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명6</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명7</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명8</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명9</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명10</span></a>
+							</li>
+						</ul>
+					</nav>
+					<!--// pos__navigation-top E -->
+
+					<section>
+						<div class="pos__header-project">
+							<select class="pos__select" data-placeholder="선택">
+								<option>프로젝트명1</option>
+								<option>프로젝트명2</option>
+								<option>프로젝트명3</option>
+								<option>프로젝트명4</option>
+								<option>프로젝트명5</option>
+							</select>
+						</div>
+
+						<div class="pos__header-search">
+							<label class="Lhide" for="menu-search">검색</label>
+							<input type="text" class="pos__input-txt" id="menu-search" placeholder="검색어를 입력하세요" name="" value="" />
+							<button type="button" class="btn__search">검색</button>
+						</div>
+						<hr />
+						<!-- pos__magnifying S -->
+						<div class="pos__magnifying">
+							<!-- pos__form-box S -->
+							<dl class="pos__form-box">
+								<dt class="tit">
+									<label for="magnifying">
+										<span>화면배율</span>
+										<span class="icon-infoB2"><!--안내--></span>
+										<span class="icon-malkanBK textL"
+											>브라우저에서 설정한 화별배율 조정 기능과는 별개로<br />시스템 화면의 화면 배율을 조정하여 사용할 수 있습니다.</span
+										>
+									</label>
+								</dt>
+								<dd>
+									<select class="pos__select" data-placeholder="선택" id="magnifying">
+										<option value="150">150%</option>
+										<option value="125">125%</option>
+										<option value="110">110%</option>
+										<option value="100" selected>100%</option>
+										<option value="90">90%</option>
+										<option value="80">80%</option>
+										<option value="75">75%</option>
+									</select>
+								</dd>
+							</dl>
+							<!--// pos__form-box E -->
+						</div>
+						<!--// pos__magnifying -->
+					</section>
+				</div>
+				<!--// 상단 메뉴 pos__header-navigation E -->
+			</header>
+			<!--// 헤더 영역 pos__header E -->
+
+			<!-- 서포터바 영역 pos__bar S -->
+			<div class="pos__bar">
+				<button type="button" class="btn__bar-open">
+					<span class="icon-arrowW">열기</span>
+				</button>
+				<!-- pos__bar-box S -->
+				<div class="pos__bar-box">
+					<!-- pos__bar-top S -->
+					<div class="pos__bar-top">
+						<button type="button" class="btn__bar-fix">고정</button>
+						<button type="button" class="btn__bar-fixNO">고정해지</button>
+						<span class="icon-malkanBK">고정</span>
+					</div>
+					<!--// pos__bar-top E -->
+
+					<!-- pos__bar-list S -->
+					<div class="pos__bar-list">
+						<ul>
+							<li>
+								<!--Selected시 li에 class ="action" 추가 -->
+								<button type="button" class="btn__bar-link">
+									<!--알림 내역 있을 경우 new 추가-->
+									<span class="icon-alarm new"><!--알림--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-book-list"><!--리스트--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-chat"><!--체크--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-share"><!--공유--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-info"><!--인포--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+						</ul>
+					</div>
+					<!--// pos__bar-list E -->
+
+					<!-- pos__bar-foot S -->
+					<div class="pos__bar-foot">
+						<button type="button" class="btn__bar-link">
+							<span class="icon-setting"><!--설정--></span>
+						</button>
+						<span class="icon-malkanBK">설정</span>
+					</div>
+					<!--// pos__bar-list E -->
+				</div>
+				<!--// pos__bar-box E -->
+			</div>
+			<!--// 서포터바 영역 pos__bar E -->
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 좌측 영역 pos__side S -->
+				<div class="pos__side">
+					<!-- pos__side-navigation S -->
+					<div class="pos__side-navigation">
+						<!-- pos__tab-list S -->
+						<ul class="pos__tab-list">
+							<li class="action"><span class="icon-meun"></span>전체메뉴</li>
+							<li><span class="icon-favorites"></span>즐겨찾기</li>
+						</ul>
+						<!--// pos__tab-list E -->
+
+						<!-- 좌측 스크롤 영역 pos__scroll S -->
+						<div class="pos__scroll">
+							<!-- 전체메뉴 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- 좌측 검생 영역 pos__side-search S -->
+								<div class="pos__side-search">
+									<label class="Lhide" for="menu-search">메뉴 검색</label>
+									<input type="text" class="pos__input-txt" id="menu-search" placeholder="메뉴 검색" name="" value="" />
+									<button type="button" class="btn__search">검색</button>
+								</div>
+								<!--// 좌측 검생 영역 pos__side-search E -->
+
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side">
+										<li class="action">
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub" style="display: block">
+												<ul>
+													<li class="action">
+														<a href="#" onclick="return false;">메뉴명 1-1-1</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre" style="display: block">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-1</a></li>
+																<li class="action"><a href="#" onclick="return false;">메뉴명 1-1-1-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-2</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-3</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-3<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-4<span class="icon-arrow1"></span></a>
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 전체메뉴 목록 pos__tab-cont E -->
+
+							<!-- 즐겨찾기 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side" id="favoritesList">
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 즐겨찾기 목록 pos__tab-cont E -->
+						</div>
+						<!--// 좌측 스크롤 영역 pos__scroll E -->
+					</div>
+					<!--// pos__side-navigation E -->
+				</div>
+				<!--// 좌측영역 pos__side E -->
+
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명 화면명 화면명 화면명 화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<!-- 대시보드 영역 pos__dashboard S -->
+							<div class="pos__dashboard">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>대시보드</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button
+												type="button"
+												class="btn__blank"
+												onclick="window.open('./dashboard.html#contentsArea', '대시보드 팝업', 'width=1650px,height=900px,scrollbars=yes')"
+											>
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__dashboard-box S -->
+								<div class="pos__dashboard-box">
+									<!-- pos__title-sub S -->
+									<div class="pos__title-sub">
+										<h2>계약업무 진행상태 확인</h2>
+									</div>
+									<!-- pos__title-sub E -->
+
+									<!-- pos__box-Style1 S -->
+									<ul class="pos__box-Style1">
+										<li class="pos__box bg__gray">
+											<h3><span class="icon-paper"></span>발주방안</h3>
+											<!-- pos__box-Style2 S -->
+											<ul class="pos__box-Style2">
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+											</ul>
+											<!--// pos__box-Style2 E -->
+										</li>
+										<li class="pos__box bg__gray">
+											<h3><span class="icon-paper"></span>발주방안</h3>
+											<!-- pos__box-Style2 S -->
+											<ul class="pos__box-Style2">
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+											</ul>
+											<!--// pos__box-Style2 E -->
+										</li>
+										<li class="pos__box bg__gray">
+											<h3><span class="icon-paper"></span>발주방안</h3>
+											<!-- pos__box-Style2 S -->
+											<ul class="pos__box-Style2">
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+											</ul>
+											<!--// pos__box-Style2 E -->
+										</li>
+										<li class="pos__box bg__gray">
+											<h3><span class="icon-paper"></span>발주방안</h3>
+											<!-- pos__box-Style2 S -->
+											<ul class="pos__box-Style2">
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+											</ul>
+											<!--// pos__box-Style2 E -->
+										</li>
+										<li class="pos__box bg__gray">
+											<h3><span class="icon-paper"></span>발주방안</h3>
+											<!-- pos__box-Style2 S -->
+											<ul class="pos__box-Style2">
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+											</ul>
+											<!--// pos__box-Style2 E -->
+										</li>
+										<li class="pos__box bg__gray">
+											<h3><span class="icon-paper"></span>발주방안</h3>
+											<!-- pos__box-Style2 S -->
+											<ul class="pos__box-Style2">
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+												<li class="pos__box pos__box-shadow bg__white">
+													<h3>현장</h3>
+													<h2>02<span>건</span></h2>
+												</li>
+											</ul>
+											<!--// pos__box-Style2 E -->
+										</li>
+									</ul>
+									<!--// pos__box-Style1 E -->
+								</div>
+								<!--// pos__dashboard-box E -->
+								<!-- pos__dashboard-box S -->
+								<div class="pos__dashboard-box">
+									<!-- pos__box-Style3 S -->
+									<ul class="pos__box-Style3">
+										<li>
+											<!-- pos__title-sub S -->
+											<div class="pos__title-sub">
+												<h2>공지사항</h2>
+												<button type="button" class="btn__tit-link">
+													<span class="icon-arrow2"><!--이동--></span>
+												</button>
+											</div>
+											<!--// pos__title-sub E -->
+											<!-- pos__box S -->
+											<div class="pos__box pos__box-shadow bg__white pd-0">
+												<!-- pos__table-box S -->
+												<div class="pos__table-box">
+													<!-- pos__table-small S -->
+													<table class="pos__table-small">
+														<thead>
+															<tr>
+																<th class="tit" style="width: auto">제목</th>
+																<th style="width: 60px">작성자</th>
+																<th style="width: 80px">작성일자</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="tit">
+																	<span class="icon-badge color-orange--line">NEW</span>
+																	<a href="#" onclick="return false;">[안내]PJT일반직 ’21년 임금조정(안)</a>
+																</td>
+																<td>홍길동</td>
+																<td>2022/09/30</td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">[안내]PJT일반직 ’21년 임금조정(안)</a></td>
+																<td>홍길동</td>
+																<td>2022/09/30</td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">[안내]PJT일반직 ’21년 임금조정(안)</a></td>
+																<td>홍길동</td>
+																<td>2022/09/30</td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">[안내]PJT일반직 ’21년 임금조정(안)</a></td>
+																<td>홍길동</td>
+																<td>2022/09/30</td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">[안내]PJT일반직 ’21년 임금조정(안)</a></td>
+																<td>홍길동</td>
+																<td>2022/09/30</td>
+															</tr>
+														</tbody>
+													</table>
+													<!--// pos__table-small E -->
+												</div>
+												<!--// pos__table-box E -->
+											</div>
+											<!--// pos__box E -->
+										</li>
+										<li>
+											<!-- pos__title-sub S -->
+											<div class="pos__title-sub">
+												<h2>헬스체크</h2>
+												<button type="button" class="btn__tit-link">
+													<span class="icon-arrow2"><!--이동--></span>
+												</button>
+											</div>
+											<!--// pos__title-sub E -->
+											<!-- pos__box S -->
+											<div class="pos__box pos__box-shadow bg__white pd-0">
+												<!-- pos__table-box S -->
+												<div class="pos__table-box">
+													<!-- pos__table-small S -->
+													<table class="pos__table-small">
+														<thead>
+															<tr>
+																<th class="tit" style="width: auto">제목</th>
+																<th style="width: 70px">종합판정</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">삼척블루파워 1,2호기 EPC, 그리고 등등</a></td>
+																<td><span class="icon-badge--text color-green--dot">정상</span></td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">삼척블루파워 1,2호기 EPC, 그리고 등등</a></td>
+																<td><span class="icon-badge--text color-red--dot">정밀검사</span></td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">삼척블루파워 1,2호기 EPC, 그리고 등등</a></td>
+																<td><span class="icon-badge--text color-yellow--dot">주의</span></td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">삼척블루파워 1,2호기 EPC, 그리고 등등</a></td>
+																<td><span class="icon-badge--text color-green--dot">정상</span></td>
+															</tr>
+															<tr>
+																<td class="tit"><a href="#" onclick="return false;">삼척블루파워 1,2호기 EPC, 그리고 등등</a></td>
+																<td><span class="icon-badge--text color-green--dot">정상</span></td>
+															</tr>
+														</tbody>
+													</table>
+													<!--// pos__table-small E -->
+												</div>
+												<!--// pos__table-box E -->
+											</div>
+											<!--// pos__box E -->
+										</li>
+										<li>
+											<!-- pos__title-sub S -->
+											<div class="pos__title-sub">
+												<h2>프로젝트 진행현황</h2>
+												<button type="button" class="btn__tit-link">
+													<span class="icon-arrow2"><!--이동--></span>
+												</button>
+											</div>
+											<!--// pos__title-sub E -->
+											<!-- pos__box S -->
+											<div class="pos__box pos__box-shadow bg__white">
+												<dl>
+													<dt>
+														<span class="icon-badge color-purple--line">공정율 34.7</span>
+														<h3>포스코 더샵<br />인천 프로젝트</h3>
+														<p>준공예정일</p>
+														<p>2022/09/30</p>
+													</dt>
+													<dd>
+														<!-- pos__box S -->
+														<div class="pos__box bg__gray">
+															<!-- pos__step-small S -->
+															<ul class="pos__step-small">
+																<li class="action"><span>계약</span></li>
+																<li class="action"><span>공사준비</span></li>
+																<li class="action"><span>토목공사</span></li>
+																<li class="progress"><span>기초공사</span></li>
+																<li><span>골조공사</span></li>
+																<li><span>마감공사</span></li>
+																<li><span>준공</span></li>
+															</ul>
+															<!--// pos__step-small E -->
+														</div>
+														<!--// pos__box E -->
+													</dd>
+												</dl>
+											</div>
+											<!--// pos__box E -->
+										</li>
+									</ul>
+									<!--// pos__box-Style3 E -->
+								</div>
+								<!--// pos__dashboard-box E -->
+								<!-- pos__dashboard-box S -->
+								<div class="pos__dashboard-box">
+									<!-- pos__box-Style3 S -->
+									<ul class="pos__box-Style3 col2">
+										<li>
+											<!-- pos__title-sub S -->
+											<div class="pos__title-sub">
+												<h2>입찰 실적조회</h2>
+												<button type="button" class="btn__tit-link">
+													<span class="icon-arrow2"><!--이동--></span>
+												</button>
+											</div>
+											<!--// pos__title-sub E -->
+											<!-- pos__box S -->
+											<!-- tab 기능 사용시 class="pos__tab-wrap" 추가 -->
+											<div class="pos__box pos__box-shadow bg__white pos__tab-wrap">
+												<!-- pos__tab-btn S -->
+												<ul class="pos__tab-btn">
+													<li class="action">년도</li>
+													<li>월별</li>
+												</ul>
+												<!--// pos__tab-btn E -->
+												<!-- pos__tab-cont S -->
+												<div class="pos__tab-cont">
+													<!-- pos__graph-bar S -->
+													<div class="pos__graph-bar">
+														<dl>
+															<dt>
+																<ul>
+																	<li><span>10,000,000,000</span></li>
+																	<li><span>5,000,000,000</span></li>
+																	<li><span>2,000,000,000</span></li>
+																	<li><span>1,000,000,000</span></li>
+																	<li><span>0</span></li>
+																</ul>
+															</dt>
+															<dd>
+																<!-- graph__bar-box S -->
+																<div class="graph__bar-box">
+																	<!-- graph__bar-bar S -->
+																	<div class="graph__bar-bar">
+																		<ul>
+																			<li><div class="bar bg__blue2"></div></li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																			<li><div class="bar bg__blue2"></div></li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																			<li>
+																				<div class="bar bg__blue2"></div>
+																				<span class="icon-malkan">7,123,987,847</span>
+																			</li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																			<li><div class="bar bg__blue2"></div></li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																		</ul>
+																	</div>
+																	<!--// graph__bar-bar E -->
+																</div>
+																<!--// graph__bar-box E -->
+																<!-- graph__bar-txt S -->
+																<div class="graph__bar-txt">
+																	<ul>
+																		<li>1월</li>
+																		<li>2월</li>
+																		<li>3월</li>
+																		<li>4월</li>
+																		<li>5월</li>
+																		<li>6월</li>
+																		<li>7월</li>
+																		<li>8월</li>
+																		<li>9월</li>
+																		<li>10월</li>
+																		<li>11월</li>
+																		<li>12월</li>
+																	</ul>
+																</div>
+																<!--// graph__bar-txt E -->
+															</dd>
+														</dl>
+													</div>
+													<!--// pos__graph-bar E -->
+												</div>
+												<!--// pos__tab-cont E -->
+												<!-- pos__tab-cont S -->
+												<div class="pos__tab-cont">
+													<div class="pos__graph-bar">
+														<dl>
+															<dt>
+																<ul>
+																	<li><span>10,000,000,000</span></li>
+																	<li><span>5,000,000,000</span></li>
+																	<li><span>2,000,000,000</span></li>
+																	<li><span>1,000,000,000</span></li>
+																	<li><span>0</span></li>
+																</ul>
+															</dt>
+															<dd>
+																<div class="graph__bar-box">
+																	<div class="graph__bar-bar">
+																		<ul>
+																			<li><div class="bar bg__blue2"></div></li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																			<li><div class="bar bg__blue2"></div></li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																			<li>
+																				<div class="bar bg__blue2"></div>
+																				<span class="icon-malkan">8,123,987,847</span>
+																			</li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																			<li><div class="bar bg__blue2"></div></li>
+																			<li><div class="bar bg__blue3"></div></li>
+																			<li><div class="bar bg__blue4"></div></li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="graph__bar-txt">
+																	<ul>
+																		<li>1월</li>
+																		<li>2월</li>
+																		<li>3월</li>
+																		<li>4월</li>
+																		<li>5월</li>
+																		<li>6월</li>
+																		<li>7월</li>
+																		<li>8월</li>
+																		<li>9월</li>
+																		<li>10월</li>
+																		<li>11월</li>
+																		<li>12월</li>
+																	</ul>
+																</div>
+															</dd>
+														</dl>
+													</div>
+												</div>
+												<!--// pos__tab-cont E -->
+											</div>
+											<!--// pos__box E -->
+										</li>
+										<li>
+											<!-- pos__title-sub S -->
+											<div class="pos__title-sub">
+												<h2>GSI 계약실적</h2>
+												<button type="button" class="btn__tit-link">
+													<span class="icon-arrow2"><!--이동--></span>
+												</button>
+											</div>
+											<!--// pos__title-sub E -->
+											<!-- pos__box S -->
+											<div class="pos__box pos__box-shadow bg__white">
+												<!-- pos__form-select S -->
+												<div class="pos__form-select">
+													<!-- pos__select S -->
+													<select class="pos__select" data-placeholder="선택">
+														<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+														<option selected>2022</option>
+														<option>2021</option>
+														<option>2020</option>
+													</select>
+													<!--// pos__select E -->
+												</div>
+												<!--// pos__form-select E -->
+												<!-- pos__graph S -->
+												<div class="pos__graph">
+													<dl>
+														<dt>
+															<span class="percent1">35%</span>
+															<span class="percent2">23%</span>
+															<span class="percent3">78%</span>
+															<img src="../assets/img/graph_donut.svg" alt="" />
+														</dt>
+														<dd>
+															<!-- pos__graph-bar1 S -->
+															<p class="pos__graph-bar1">
+																공사<span class="bar"><span style="width: 35%"></span></span><strong>35%</strong>
+															</p>
+															<!--// pos__graph-bar1 E -->
+															<!-- pos__graph-bar2 S -->
+															<p class="pos__graph-bar2">
+																통합<span class="bar"><span style="width: 78%"></span></span><strong>78%</strong>
+															</p>
+															<!--// pos__graph-bar2 E -->
+															<!-- pos__graph-bar3 S -->
+															<p class="pos__graph-bar3">
+																자재<span class="bar"><span style="width: 23%"></span></span><strong>23%</strong>
+															</p>
+															<!--// pos__graph-bar3 E -->
+														</dd>
+													</dl>
+												</div>
+												<!--// pos__graph E -->
+											</div>
+											<!--// pos__box E -->
+										</li>
+									</ul>
+									<!--// pos__box-Style3 E -->
+								</div>
+								<!--// pos__dashboard-box E -->
+							</div>
+							<!--// 대시보드 영역 pos__dashboard E -->
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+
+		<!-- 팝업 -->
+		<div id="popup-favorites" class="pos__popup-favorites" title="즐겨찾기 추가">
+			<div class="pos__popup-contents">
+				<!-- pos__popup-box S -->
+				<div class="pos__popup-box">
+					<p class="pd-t24">즐겨찾기에 추가합니다.</p>
+
+					<!-- pos__form-box S -->
+					<dl class="pos__form-box">
+						<dt class="tit">
+							<label for="favorites"><span>폴더</span></label>
+						</dt>
+						<dd>
+							<select class="pos__select" data-placeholder="선택" id="favorites" data-placeholder="선택">
+								<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+								<option>폴더명 1</option>
+								<option>폴더명 2</option>
+								<option>폴더명 3</option>
+							</select>
+						</dd>
+					</dl>
+					<!--// pos__form-box E -->
+				</div>
+				<!--// pos__popup-box E -->
+			</div>
+			<div class="pos__popup-footer">
+				<button type="button" class="btn__basic" onclick='$("#popup-favorites").dialog("close");'><span>취소</span></button>
+				<button type="button" class="btn__basic color-blue"><span>확인</span></button>
+			</div>
+		</div>
+		<!-- //팝업 -->
+	</body>
+</html>

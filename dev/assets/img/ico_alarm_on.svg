@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:rgba(255,255,255,.2);opacity:.001" d="M0 0h24v24H0z"/>
+    <path data-name="패스 13" d="M14.714 12.429H3.286V6.714a5.714 5.714 0 0 1 11.429 0z" style="fill:none;stroke:#123160" transform="translate(3 5)"/>
+    <path data-name="패스 14" d="M1 12.429h16m-13.714 0V6.714a5.714 5.714 0 0 1 11.429 0v5.714m-8 .571v.714a2.286 2.286 0 0 0 4.571 0V13" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none;stroke:#123160" transform="translate(3 5)"/>
+</svg>

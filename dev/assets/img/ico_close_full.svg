@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:none" d="M0 0h24v24H0z"/>
+    <g data-name="합치기 5" style="fill:none">
+        <path d="M4 5V2H1a1 1 0 0 1 0-2h4a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0z" style="stroke:none" transform="rotate(180 10 5)"/>
+        <path d="M5 5V2.246L5 4.999H5m0 1a1 1 0 0 1-1-1V2H1A1 1 0 1 1 1 0h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z" style="fill:#fff;stroke:none" transform="rotate(180 10 5)"/>
+    </g>
+    <g data-name="합치기 6" style="fill:none">
+        <path d="M5 6H1a1 1 0 1 1 0-2h3V1a1 1 0 1 1 2 0v4a1 1 0 0 1-1 1z" style="stroke:none" transform="translate(4 4)"/>
+        <path d="M5 6H1a1 1 0 0 1 0-2h3V1a1 1 0 1 1 2 0v4a1 1 0 0 1-1 1z" style="fill:#fff;stroke:none" transform="translate(4 4)"/>
+    </g>
+    <g data-name="합치기 7" style="fill:none">
+        <path d="M5 6H1a1 1 0 1 1 0-2h3V1a1 1 0 1 1 2 0v4a1 1 0 0 1-1 1z" style="stroke:none" transform="rotate(180 10 10)"/>
+        <path d="M5 6H1a1 1 0 0 1 0-2h3V1a1 1 0 1 1 2 0v4a1 1 0 0 1-1 1z" style="fill:#fff;stroke:none" transform="rotate(180 10 10)"/>
+    </g>
+    <g data-name="합치기 8" style="fill:none">
+        <path d="M4 5V2H1a1 1 0 0 1 0-2h4a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0z" style="stroke:none" transform="translate(4 14)"/>
+        <path d="M5 5V2.246L5 4.999H5m0 1a1 1 0 0 1-1-1V2H1A1 1 0 1 1 1 0h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z" style="fill:#fff;stroke:none" transform="translate(4 14)"/>
+    </g>
+</svg>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			
+
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>물류이력</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>공사개요</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+                                        <li>
+											<button type="button" class="btn__basic color-blue"><span>등록</span></button>
+										</li>
+                                        <li>
+											<button type="button" class="btn__basic color-blue"><span>조회</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>저장</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__search-box S -->
+								<div class="pos__search-box">
+									<!-- pos__search-cont S -->
+									<div class="pos__search-cont">
+										<!-- pos__grid S -->
+										<div class="pos__grid">
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col col-6">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos1">
+																<span>프로젝트<em>*</em></span>
+															</label>
+														</dt>
+														<dd>
+															<input class="pos__input-text pos__size-small" id="pos1" type="text" name="" value="070503EA" />
+															<!-- pos__search S -->
+															<div class="pos__search pos__size-small mg-l6">
+																<input class="pos__input-text" id="pos1-1" type="text" name="" value="인천도시철도 2호선 차량운행" />
+																<button type="button" class="btn__search">
+																	<span><!--검색--></span>
+																</button>
+															</div>
+															<!--// pos__search E -->
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												
+											</ul>
+											<!--// pos__grid-row E -->
+										</div>
+										<!--// pos__grid E -->
+									</div>
+									<!--// pos__search-cont E -->
+
+									<!-- pos__search-right S -->
+									<div class="pos__search-right">
+										<!-- pos__btn-box S -->
+										<div class="pos__btn-box">
+											<button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+										</div>
+										<!--// pos__btn-box E -->
+									</div>
+									<!--// pos__search-right E -->
+								</div>
+								<!--// pos__search-box E -->
+                                <div class="flex" style="display: flex; justify-content: space-between;">
+                                    <!-- pos__search-box S -->
+                                    <div class="pos__search-box mg-t16  " style="width: 49.5%;">
+                                        <!-- pos__search-cont S -->
+                                        <div class="pos__search-cont">
+                                            <!-- pos__grid S -->
+                                            <div class="pos__grid">
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box">
+                                                            <dt class="tit" style="min-width: 70px;">
+                                                                <label for="pos1">
+                                                                    <span>공사명</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text pos__size-small" id="pos1" type="text" name="" value="" disabled />
+                                                                <!-- pos__search S -->
+                                                                <input class="pos__input-text pos__size-small3" id="pos1" type="text" name="" value="" disabled />
+                                                                <!--// pos__search E -->
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                    
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6 pos__flex" style="width: 100%;">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box" style="width: 50%;">
+                                                            <dt class="tit" style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>현장주소</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd  style="width: 100%;">
+                                                                <input class="pos__input-text "  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box  pd-l12" style="width: 25%;">
+                                                            <dt class="tit" style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>전화번호</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text"  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 25%;">
+                                                            <dt class="tit" style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>발주처</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text "  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6 pos__flex" style="width: 100%;">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>공사금액</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text"  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>공정율</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text "  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>계약형태</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text"  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>당사지분율</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text "  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                            <dd>%</dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6 pos__flex" style="width: 100%;">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>본부</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text"  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>작공일</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text "  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="">
+                                                                    <span>준공예정일(P)</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text"  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 25%;">
+                                                            <dt class="tit"style="min-width: 70px;">
+                                                                <label for="pos4">
+                                                                    <span>진행(P)</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <select class="pos__select" data-placeholder="선택" id="pos4" >
+                                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                    <option>전체</option>
+                                                                    <option>선택</option>
+                                                                    <option>선택</option>
+                                                                </select>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                            </div>
+                                            <!--// pos__grid E -->
+                                        </div>
+                                        <!--// pos__search-cont E -->
+                                    </div>
+                                    <!--// pos__search-box E -->
+                                    <!-- pos__search-box S -->
+                                    <div class="pos__search-box mg-t16  " style="width: 49.5%;">
+                                        <!-- pos__search-cont S -->
+                                        <div class="pos__search-cont">
+                                            <!-- pos__grid S -->
+                                            <div class="pos__grid">
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6 pos__flex " style="width: 100%;">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box " style="width: 50%;">
+                                                            <dt class="tit " style="min-width: 100px;">
+                                                                <label for="pos4">
+                                                                    <span>진행확인</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <select class="pos__select" data-placeholder="선택" id="">
+                                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                    <option>전체</option>
+                                                                    <option>선택</option>
+                                                                    <option>선택</option>
+                                                                </select>
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 50%;">
+                                                            <dt class="tit" style="min-width: 80px;">
+                                                                <label for="pos4">
+                                                                    <span>지역</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <select class="pos__select" data-placeholder="선택" id="pos4">
+                                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                    <option>전체</option>
+                                                                    <option>선택</option>
+                                                                    <option>선택</option>
+                                                                </select>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box" style="width: 50%;">
+                                                            <dt class="tit" style="min-width: 100px;">
+                                                                <label for="pos1">
+                                                                    <span>환경관리자(ECE)</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                    
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6 pos__flex" style="width: 100%;">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box" style="width: 50%;">
+                                                            <dt class="tit" style="min-width: 100px;">
+                                                                <label for="">
+                                                                    <span>환경담당자</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text"  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 50%;">
+                                                            <dt class="tit" style="min-width: 80px;">
+                                                                <label for="pos4">
+                                                                    <span>실착공일</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <select class="pos__select" data-placeholder="선택" id="pos4">
+                                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                    <option>전체</option>
+                                                                    <option>선택</option>
+                                                                    <option>선택</option>
+                                                                </select>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6 pos__flex" style="width: 100%;">
+                                                        <!-- pos__form-box S -->
+                                                        <dl class="pos__form-box" style="width: 50%;">
+                                                            <dt class="tit " style="min-width: 100px;">
+                                                                <label for="">
+                                                                    <span>환경반장</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <input class="pos__input-text"  id="" type="text" name="" value="" disabled />
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="pos__form-box pd-l12" style="width: 50%;">
+                                                            <dt class="tit" style="min-width:80px;">
+                                                                <label for="pos4">
+                                                                    <span>실준공예정일</span>
+                                                                </label>
+                                                            </dt>
+                                                            <dd>
+                                                                <select class="pos__select" data-placeholder="선택" id="pos4">
+                                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                    <option>전체</option>
+                                                                    <option>선택</option>
+                                                                    <option>선택</option>
+                                                                </select>
+                                                            </dd>
+                                                        </dl>
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                                <!-- pos__grid-row S -->
+                                                <ul class="pos__grid-row">
+                                                    <li class="col col-6 pos__flex" style="width: 100%;">
+                                                        <!-- pos__form-box S -->
+                                                        <div class="pos__flex" style="width: 100%;">
+                                                            <dl class="pos__form-box" >
+                                                                <dt class="tit" style="min-width: 100px;">
+                                                                    <label for="">
+                                                                        <span>현장사무실주소</span>
+                                                                    </label>
+                                                                </dt>
+                                                                <dd>
+                                                                    <input class="pos__input-text"  style="width: 100%;" id="" type="text" name="" value="" />
+                                                                </dd>
+                                                            </dl>
+                                                            <ul class="pos__table-btn pos__flex pd-0">
+                                                                <li>
+                                                                    <button type="button" class="btn__small color-blue mg-0 mg-l6"><span>약도등록</span></button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="btn__small color-blue mg-0 mg-l6"><span>약도조회</span></button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        
+                                                        <!--// pos__form-box E -->
+                                                        
+                                                    </li>
+                                                </ul>
+                                                <!--// pos__grid-row E -->
+                                            </div>
+                                            <!--// pos__grid E -->
+                                        </div>
+                                        <!--// pos__search-cont E -->
+                                    </div>
+                                    <!--// pos__search-box E -->
+                                </div>
+								<!-- ibsheet S -->
+                                <div class="mg-t16 just-between" style="padding-bottom: 70px;">
+                                    <!-- pos__table-box S -->
+                                    <div style="width: 25%;">
+                                        <div class="pos__table-top">
+                                            <h3>현장조직 (2023-03-22)</h3>
+                                        </div>
+                                        <div class="pos__table-box">
+                                            <!-- pos__table S -->
+                                            <!-- hover 효과가 들어간 table일 경우 class="pos__table-hover" 추가 -->
+                                            <table class="pos__table">
+                                                <colgroup>
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            PJT 직책
+                                                        </th>
+                                                        <th>
+                                                            성명
+                                                        </th>
+                                                        <th>
+                                                            직위
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM</td>
+                                                        <td>홍길동</td>
+                                                        <td>리더</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--// pos__table E -->
+                                        </div>
+                                    </div>
+                                    <div style="width: 30%;"  class="colum-block">
+                                        <div class="pos__table-top">
+                                            <h3>현장조직 (2023-03-22)</h3>
+                                        </div>
+                                        <div class="member-block">
+                                            <dl class="">
+                                                <dt class="tit" style="width: 80px;">
+                                                        총괄책임자
+                                                </dt>
+                                                <dd>
+                                                    <input class="pos__input-text"  id="" type="text" name="" value=""  />
+                                                </dd>
+                                            </dl>
+                                            <div class="tree-02">
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            현장환경관리팀
+                                                    </dt>
+                                                    <dd>
+                                                        <input class="pos__input-text"  id="" type="text" name="" value=""  />
+                                                    </dd>
+                                                    <dd>
+                                                        <input class="pos__input-text"  id="" type="text" name="" value=""  />
+                                                    </dd>
+                                                    <dd>
+                                                        <input class="pos__input-text"  id="" type="text" name="" value=""  />
+                                                    </dd>
+                                                </dl>
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            본사 환경담당
+                                                    </dt>
+                                                    <dd>
+                                                        <input class="pos__input-text"  id="" type="text" name="" value=""  />
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="tree-03">
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            관리팀
+                                                    </dt>
+                                                    <dd>
+                                                        <select class="pos__select">
+                                                            <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            토목
+                                                    </dt>
+                                                    <dd>
+                                                        <select class="pos__select">
+                                                            <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            관리팀
+                                                    </dt>
+                                                    <dd>
+                                                        <select class="pos__select">
+                                                            <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            토목
+                                                    </dt>
+                                                    <dd>
+                                                        <select class="pos__select">
+                                                            <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            관리팀
+                                                    </dt>
+                                                    <dd>
+                                                        <select class="pos__select">
+                                                            <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                                <dl class="">
+                                                    <dt class="tit" style="width: 80px;">
+                                                            토목
+                                                    </dt>
+                                                    <dd>
+                                                        <select class="pos__select">
+                                                            <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                            <option>선택</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="width: 45%;">
+                                        <div class="pos__table-top">
+                                            <h3>현경관리 업무 R&R (2023-03-22)</h3>
+                                        </div>
+                                        <div class="pos__table-box">
+                                            <!-- pos__table S -->
+                                            <!-- hover 효과가 들어간 table일 경우 class="pos__table-hover" 추가 -->
+                                            <table class="pos__table">
+                                                <colgroup>
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>구분</th>
+                                                        <th>세부내용</th>
+                                                        <th>FA</th>
+                                                        <th>CA</th>
+                                                        <th>CE</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>환경인허가</td>
+                                                        <td>환경관련 인허가</td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>환경인허가</td>
+                                                        <td>환경관련 인허가</td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>환경인허가</td>
+                                                        <td>환경관련 인허가</td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                        <td>
+                                                            <dl class="pos__form-box">
+                                                                <dd>
+                                                                    <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                        <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                        <option>선택</option>
+                                                                    </select>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--// pos__table E -->
+                                        </div>
+                                    </div>
+                                    
+								<!--// pos__table-box E -->
+                                </div>
+								<!--// ibsheet E -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+
+
+		<script>
+			var ib = ib || {};
+			ib = {
+				//시트 초기화 구문
+				init: {},
+				//시트객체 생성
+				create: function () {
+					window.Cal = null;
+				},
+				//화면 기능
+				sampleBtn: function () {
+					var btnObj = arguments[0];
+
+					// 달력내에 날짜 선택시
+					function callBack(pickdate) {
+						// pickdate는 1549897200000  와 같은 timeStamp 형태의 숫자가 넘어옴
+						var inp = btnObj.getAttribute("inp");
+						var format = "yyyy/MM/dd";
+						var str = "";
+
+						if (pickdate != "") {
+							if (isNaN(pickdate)) {
+								// 기간 데이터
+								var pd = pickdate.split(";");
+
+								for (var i = 0; i < pd.length; i++) {
+									if (pd[i].indexOf("~") > -1) {
+										var rdate = pd[i].split("~");
+
+										pd[i] = IBSheet.dateToString(parseInt(rdate[0], 10), format) + "~" + IBSheet.dateToString(parseInt(rdate[1], 10), format);
+									} else {
+										pd[i] = IBSheet.dateToString(parseInt(pd[i], 10), format);
+									}
+								}
+								str = pd.join(";");
+							} else {
+								// 단일 일자
+								str = IBSheet.dateToString(pickdate, format);
+							}
+						}
+
+						document.getElementById(inp).value = str;
+					}
+					// 달력 위치 정보
+					var pos = {
+						Mouse: 1,
+						Move: 1,
+					};
+
+					if (btnObj.innerText == "일반") {
+						// 2019/03/01
+						var optionCal = {
+							Date: new Date(),
+							Buttons: 5, // 달력 밑에 나타날 버튼을 설정 1 - Today, 2 - Clear, 4 - Ok, 8 - Yesterday
+							Texts: {
+								Ok: "선택",
+								Clear: "지우기",
+								Cancel: "취소",
+								Today: "오늘",
+								Yesterday: "어제",
+								EmptyTip: "공백",
+							},
+						};
+
+						if (Cal) {
+							Cal.Close();
+						}
+						Cal = IBSheet.showCalendar(optionCal, pos, callBack);
+					}
+				},
+			};
+			ib.create();
+		</script>
+	</body>
+</html>

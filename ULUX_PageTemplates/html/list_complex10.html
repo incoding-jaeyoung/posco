@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+		<script>
+			$(document).ready(function () {
+				new ResizeSensor($(".pos__contents-box"), function (size) {
+					var contH = size.height;
+					var contTit = $(".pos__title").outerHeight(true);
+					$(".pos__table-layout").css("height", contH - contTit - 32);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- 헤더 영역 pos__header S -->
+			<header id="header" class="pos__header">
+				<!-- 로고 영역 pos__header-logo S -->
+				<div class="pos__header-logo">
+					<button type="button" class="btn__menu-all" id="closeAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<button type="button" class="btn__menu-all" id="openAllPanes">
+						<span class="icon-menu">menu</span>
+					</button>
+					<!-- 로고 pos__header-logo S -->
+					<div class="pos__logo">
+						<h1>e-Procurement</h1>
+						구매관리시스템
+					</div>
+					<!--// 로고 pos__header-logo E -->
+				</div>
+				<!--// 로고 pos__header-logo E -->
+
+				<!-- 상단 메뉴 영역 pos__header-navigation S -->
+				<div class="pos__header-navigation">
+					<!-- pos__navigation-top S -->
+					<nav class="pos__navigation-top">
+						<ul>
+							<li class="action">
+								<!-- 활성화시 class="action" -->
+								<a href="#" onclick="return false;"><span>메뉴명1</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명2</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명3</span></a>
+								<div class="pos__navigation-menu">
+									<ul>
+										<li>
+											<a href="">메뉴명 1-1</a>
+											<ul>
+												<li><a href="">메뉴명 1-1-1</a></li>
+												<li><a href="">메뉴명 1-1-2</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="">메뉴명 1-2</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-3</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-4</a>
+										</li>
+										<li>
+											<a href="">메뉴명 1-5</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명4</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명5</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명6</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명7</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명8</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명9</span></a>
+							</li>
+							<li>
+								<a href="#" onclick="return false;"><span>메뉴명10</span></a>
+							</li>
+						</ul>
+					</nav>
+					<!--// pos__navigation-top E -->
+
+					<section>
+						<div class="pos__header-project">
+							<select class="pos__select" data-placeholder="선택">
+								<option>프로젝트명1</option>
+								<option>프로젝트명2</option>
+								<option>프로젝트명3</option>
+								<option>프로젝트명4</option>
+								<option>프로젝트명5</option>
+							</select>
+						</div>
+
+						<div class="pos__header-search">
+							<label class="Lhide" for="menu-search">검색</label>
+							<input type="text" class="pos__input-txt" id="menu-search" placeholder="검색어를 입력하세요" name="" value="" />
+							<button type="button" class="btn__search">검색</button>
+						</div>
+						<hr />
+						<!-- pos__magnifying S -->
+						<div class="pos__magnifying">
+							<!-- pos__form-box S -->
+							<dl class="pos__form-box">
+								<dt class="tit">
+									<label for="magnifying">
+										<span>화면배율</span>
+										<span class="icon-infoB2"><!--안내--></span>
+										<span class="icon-malkanBK textL"
+											>브라우저에서 설정한 화별배율 조정 기능과는 별개로<br />시스템 화면의 화면 배율을 조정하여 사용할 수 있습니다.</span
+										>
+									</label>
+								</dt>
+								<dd>
+									<select class="pos__select" data-placeholder="선택" id="magnifying">
+										<option value="150">150%</option>
+										<option value="125">125%</option>
+										<option value="110">110%</option>
+										<option value="100" selected>100%</option>
+										<option value="90">90%</option>
+										<option value="80">80%</option>
+										<option value="75">75%</option>
+									</select>
+								</dd>
+							</dl>
+							<!--// pos__form-box E -->
+						</div>
+						<!--// pos__magnifying -->
+					</section>
+				</div>
+				<!--// 상단 메뉴 pos__header-navigation E -->
+			</header>
+			<!--// 헤더 영역 pos__header E -->
+
+			<!-- 서포터바 영역 pos__bar S -->
+			<div class="pos__bar">
+				<button type="button" class="btn__bar-open">
+					<span class="icon-arrowW">열기</span>
+				</button>
+				<!-- pos__bar-box S -->
+				<div class="pos__bar-box">
+					<!-- pos__bar-top S -->
+					<div class="pos__bar-top">
+						<button type="button" class="btn__bar-fix">고정</button>
+						<button type="button" class="btn__bar-fixNO">고정해지</button>
+						<span class="icon-malkanBK">고정</span>
+					</div>
+					<!--// pos__bar-top E -->
+
+					<!-- pos__bar-list S -->
+					<div class="pos__bar-list">
+						<ul>
+							<li>
+								<!--Selected시 li에 class ="action" 추가 -->
+								<button type="button" class="btn__bar-link">
+									<!--알림 내역 있을 경우 new 추가-->
+									<span class="icon-alarm new"><!--알림--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-book-list"><!--리스트--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-chat"><!--체크--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-share"><!--공유--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트</span>
+							</li>
+							<li>
+								<button type="button" class="btn__bar-link">
+									<span class="icon-info"><!--인포--></span>
+								</button>
+								<span class="icon-malkanBK">텍스트텍스트텍스트</span>
+							</li>
+						</ul>
+					</div>
+					<!--// pos__bar-list E -->
+
+					<!-- pos__bar-foot S -->
+					<div class="pos__bar-foot">
+						<button type="button" class="btn__bar-link">
+							<span class="icon-setting"><!--설정--></span>
+						</button>
+						<span class="icon-malkanBK">설정</span>
+					</div>
+					<!--// pos__bar-list E -->
+				</div>
+				<!--// pos__bar-box E -->
+			</div>
+			<!--// 서포터바 영역 pos__bar E -->
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 좌측 영역 pos__side S -->
+				<div class="pos__side">
+					<!-- pos__side-navigation S -->
+					<div class="pos__side-navigation">
+						<!-- pos__tab-list S -->
+						<ul class="pos__tab-list">
+							<li class="action"><span class="icon-meun"></span>전체메뉴</li>
+							<li><span class="icon-favorites"></span>즐겨찾기</li>
+						</ul>
+						<!--// pos__tab-list E -->
+
+						<!-- 좌측 스크롤 영역 pos__scroll S -->
+						<div class="pos__scroll">
+							<!-- 전체메뉴 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- 좌측 검생 영역 pos__side-search S -->
+								<div class="pos__side-search">
+									<label class="Lhide" for="menu-search">메뉴 검색</label>
+									<input type="text" class="pos__input-txt" id="menu-search" placeholder="메뉴 검색" name="" value="" />
+									<button type="button" class="btn__search">검색</button>
+								</div>
+								<!--// 좌측 검생 영역 pos__side-search E -->
+
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side">
+										<li class="action">
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub" style="display: block">
+												<ul>
+													<li class="action">
+														<a href="#" onclick="return false;">메뉴명 1-1-1</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre" style="display: block">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-1</a></li>
+																<li class="action"><a href="#" onclick="return false;">메뉴명 1-1-1-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-1-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-2</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-2-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+													<li>
+														<a href="#" onclick="return false;">메뉴명 1-1-3</a>
+														<!-- 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre S -->
+														<div class="pos__navigation-childre">
+															<ul>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-1</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-2</a></li>
+																<li><a href="#" onclick="return false;">메뉴명 1-1-3-3</a></li>
+															</ul>
+														</div>
+														<!--// 좌측 메뉴 목록 - 서브(소메뉴) pos__navigation-childre E -->
+													</li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-3<span class="icon-arrow1"></span></a>
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-4<span class="icon-arrow1"></span></a>
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 전체메뉴 목록 pos__tab-cont E -->
+
+							<!-- 즐겨찾기 목록 pos__tab-cont S -->
+							<div class="pos__tab-cont">
+								<!-- pos__navigation S -->
+								<nav class="pos__navigation">
+									<!-- 좌측 메뉴 목록(대메뉴) pos__navigation-side S -->
+									<ul class="pos__navigation-side" id="favoritesList">
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-1<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-1-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+										<li>
+											<a href="#" onclick="return false;">메뉴명 1-2<span class="icon-arrow1"></span></a>
+											<!-- 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side S -->
+											<div class="pos__navigation-sub">
+												<ul>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-1</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-2</a></li>
+													<li><a href="#" onclick="return false;">메뉴명 1-2-3</a></li>
+												</ul>
+											</div>
+											<!--// 좌측 메뉴 목록 - 서브(중메뉴) pos__navigation-side E -->
+
+											<!-- 메뉴 수정 영역 pos__edit S -->
+											<div class="pos__edit">
+												<button type="button" class="btn__edit">
+													<span><!--폴더명수정/삭제--></span>
+												</button>
+												<!-- pos__edit-box S -->
+												<ul class="pos__edit-box">
+													<li class="edit" tabindex="0">폴더명 변경</li>
+													<li class="del" tabindex="0">폴더 삭제</li>
+												</ul>
+												<!--// pos__edit-box E -->
+											</div>
+											<!--// 메뉴 수정 영역 pos__edit E -->
+										</li>
+									</ul>
+									<!--// 좌측 메뉴 목록(대메뉴) pos__navigation-side E -->
+								</nav>
+								<!--// pos__navigation E -->
+							</div>
+							<!--// 즐겨찾기 목록 pos__tab-cont E -->
+						</div>
+						<!--// 좌측 스크롤 영역 pos__scroll E -->
+					</div>
+					<!--// pos__side-navigation E -->
+				</div>
+				<!--// 좌측영역 pos__side E -->
+
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>그룹메뉴관리</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+									<li>
+										<a href="#" onclick="return false;"><span>화면명 화면명 화면명 화면명 화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>그룹메뉴관리</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>다운로드</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-blue"><span>저장</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__table-layout S -->
+								<!-- 화살표 버튼이 들어갈 경우 아래와 같이 class = pos__table-layout-arrow 추가 -->
+								<div class="pos__table-layout pos__table-layout-arrow">
+									<!-- pos__layout-left S -->
+									<div class="pos__layout-left col-6">
+										<!-- pos__table-top S -->
+										<div class="pos__table-top">
+											<h3>사용중인 메뉴</h3>
+										</div>
+										<!--// pos__table-top E -->
+
+										<!-- pos__table-box S -->
+										<div class="pos__table-box">
+											<!-- pos__scroll S -->
+											<div class="pos__scroll">
+												<!-- pos__table S -->
+												<!-- 트리 형식의 table일 경우 class="pos__table-toggle" 추가 -->
+												<table class="pos__table pos__table-toggle">
+													<colgroup>
+														<col style="width: 1%" />
+														<col style="width: 65%" />
+														<col style="width: 1%" />
+														<col style="width: 1%" />
+														<col style="width: 16%" />
+														<col style="width: 16%" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th class="checkbox textC">
+																<input type="checkbox" name="Allchk" id="checkboxAll" class="pos__checkbox-All" /><label for="checkboxAll"></label>
+															</th>
+															<th>명칭</th>
+															<th>조회</th>
+															<th>수정</th>
+															<th>대메뉴</th>
+															<th>중메뉴</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox300" class="pos__checkbox" /><label for="checkbox300" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree1"><span class="icon-toggle"></span>프로젝트 PM</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree1">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox301" class="pos__checkbox" /><label for="checkbox301" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox1" class="pos__checkbox" checked /><label for="checkbox1" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox2" class="pos__checkbox" checked /><label for="checkbox2" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree1">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox302" class="pos__checkbox" /><label for="checkbox302" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox3" class="pos__checkbox" checked /><label for="checkbox3" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox4" class="pos__checkbox" checked /><label for="checkbox4" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree1">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox303" class="pos__checkbox" /><label for="checkbox303" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox5" class="pos__checkbox" checked /><label for="checkbox5" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox6" class="pos__checkbox" checked /><label for="checkbox6" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree1">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox304" class="pos__checkbox" /><label for="checkbox304" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox7" class="pos__checkbox" checked /><label for="checkbox7" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox8" class="pos__checkbox" checked /><label for="checkbox8" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree1">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox305" class="pos__checkbox" /><label for="checkbox305" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox9" class="pos__checkbox" checked /><label for="checkbox9" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox10" class="pos__checkbox" checked /><label for="checkbox10" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--프로젝트 PM-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox306" class="pos__checkbox" /><label for="checkbox306" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree2"><span class="icon-toggle"></span>프로젝트 담당자</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree2">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox307" class="pos__checkbox" /><label for="checkbox307" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox11" class="pos__checkbox" checked /><label for="checkbox11" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox12" class="pos__checkbox" checked /><label for="checkbox12" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree2">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox308" class="pos__checkbox" /><label for="checkbox308" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox13" class="pos__checkbox" checked /><label for="checkbox13" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox14" class="pos__checkbox" checked /><label for="checkbox14" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree2">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox309" class="pos__checkbox" /><label for="checkbox309" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox15" class="pos__checkbox" checked /><label for="checkbox15" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox16" class="pos__checkbox" checked /><label for="checkbox16" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree2">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox310" class="pos__checkbox" /><label for="checkbox310" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox17" class="pos__checkbox" checked /><label for="checkbox17" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox18" class="pos__checkbox" checked /><label for="checkbox18" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree2">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox311" class="pos__checkbox" /><label for="checkbox311" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox19" class="pos__checkbox" checked /><label for="checkbox19" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox20" class="pos__checkbox" checked /><label for="checkbox20" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--프로젝트 담당자-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox312" class="pos__checkbox" /><label for="checkbox312" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree3"><span class="icon-toggle"></span>조회전용</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree3">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox313" class="pos__checkbox" /><label for="checkbox313" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox21" class="pos__checkbox" checked /><label for="checkbox21" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox22" class="pos__checkbox" checked /><label for="checkbox22" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree3">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox314" class="pos__checkbox" /><label for="checkbox314" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox23" class="pos__checkbox" checked /><label for="checkbox23" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox24" class="pos__checkbox" checked /><label for="checkbox24" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree3">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox315" class="pos__checkbox" /><label for="checkbox315" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox25" class="pos__checkbox" checked /><label for="checkbox25" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox26" class="pos__checkbox" checked /><label for="checkbox26" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree3">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox316" class="pos__checkbox" /><label for="checkbox316" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox27" class="pos__checkbox" checked /><label for="checkbox27" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox28" class="pos__checkbox" checked /><label for="checkbox28" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree3">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox317" class="pos__checkbox" /><label for="checkbox317" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox29" class="pos__checkbox" checked /><label for="checkbox29" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox30" class="pos__checkbox" checked /><label for="checkbox30" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--조회전용-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox318" class="pos__checkbox" /><label for="checkbox318" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree4"><span class="icon-toggle"></span>본부 견적부서</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree4">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox319" class="pos__checkbox" /><label for="checkbox319" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox31" class="pos__checkbox" checked /><label for="checkbox31" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox32" class="pos__checkbox" checked /><label for="checkbox32" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree4">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox320" class="pos__checkbox" /><label for="checkbox320" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox33" class="pos__checkbox" checked /><label for="checkbox33" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox34" class="pos__checkbox" checked /><label for="checkbox34" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree4">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox321" class="pos__checkbox" /><label for="checkbox321" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox35" class="pos__checkbox" checked /><label for="checkbox35" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox36" class="pos__checkbox" checked /><label for="checkbox36" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree4">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox322" class="pos__checkbox" /><label for="checkbox322" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox37" class="pos__checkbox" checked /><label for="checkbox37" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox38" class="pos__checkbox" checked /><label for="checkbox38" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree4">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox323" class="pos__checkbox" /><label for="checkbox323" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox39" class="pos__checkbox" checked /><label for="checkbox39" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox40" class="pos__checkbox" checked /><label for="checkbox40" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--본부 견적부서-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox324" class="pos__checkbox" /><label for="checkbox324" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree5"><span class="icon-toggle"></span>사업관리부서</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree5">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox325" class="pos__checkbox" /><label for="checkbox325" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox41" class="pos__checkbox" checked /><label for="checkbox41" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox42" class="pos__checkbox" checked /><label for="checkbox42" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree5">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox326" class="pos__checkbox" /><label for="checkbox326" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox43" class="pos__checkbox" checked /><label for="checkbox43" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox44" class="pos__checkbox" checked /><label for="checkbox44" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree5">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox327" class="pos__checkbox" /><label for="checkbox327" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox45" class="pos__checkbox" checked /><label for="checkbox45" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox46" class="pos__checkbox" checked /><label for="checkbox46" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree5">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox328" class="pos__checkbox" /><label for="checkbox328" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox47" class="pos__checkbox" checked /><label for="checkbox47" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox48" class="pos__checkbox" checked /><label for="checkbox48" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree5">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox329" class="pos__checkbox" /><label for="checkbox329" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox49" class="pos__checkbox" checked /><label for="checkbox49" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox50" class="pos__checkbox" checked /><label for="checkbox50" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--사업관리부서-->
+														<tr class="title on">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox330" class="pos__checkbox" /><label for="checkbox330" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree6"><span class="icon-toggle"></span>자체계약부서</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox331" class="pos__checkbox" /><label for="checkbox331" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox51" class="pos__checkbox" checked /><label for="checkbox51" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox52" class="pos__checkbox" checked /><label for="checkbox52" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox332" class="pos__checkbox" /><label for="checkbox332" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox53" class="pos__checkbox" /><label for="checkbox53" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox54" class="pos__checkbox" /><label for="checkbox54" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox333" class="pos__checkbox" /><label for="checkbox333" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox55" class="pos__checkbox" checked /><label for="checkbox55" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox56" class="pos__checkbox" checked /><label for="checkbox56" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox334" class="pos__checkbox" /><label for="checkbox334" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox57" class="pos__checkbox" /><label for="checkbox57" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox58" class="pos__checkbox" /><label for="checkbox58" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox335" class="pos__checkbox" /><label for="checkbox335" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox59" class="pos__checkbox" checked /><label for="checkbox59" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox60" class="pos__checkbox" checked /><label for="checkbox60" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox336" class="pos__checkbox" /><label for="checkbox336" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox51_1" class="pos__checkbox" />
+																<label for="checkbox51_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox52_2" class="pos__checkbox" />
+																<label for="checkbox52_2" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox337" class="pos__checkbox" /><label for="checkbox337" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox53_1" class="pos__checkbox" checked />
+																<label for="checkbox53_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox54_1" class="pos__checkbox" checked />
+																<label for="checkbox54_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox338" class="pos__checkbox" /><label for="checkbox338" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox55_1" class="pos__checkbox" />
+																<label for="checkbox55_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox56_1" class="pos__checkbox" />
+																<label for="checkbox56_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox339" class="pos__checkbox" /><label for="checkbox339" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox57_1" class="pos__checkbox" checked />
+																<label for="checkbox57_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox58_1" class="pos__checkbox" checked />
+																<label for="checkbox58_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub unfold" idx="tree6">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox340" class="pos__checkbox" /><label for="checkbox340" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox59_1" class="pos__checkbox" />
+																<label for="checkbox59_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox60_1" class="pos__checkbox" />
+																<label for="checkbox60_1" tabindex="0" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--자체계약부서-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox341" class="pos__checkbox" /><label for="checkbox341" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree7"><span class="icon-toggle"></span>프로젝트 PM</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree7">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox342" class="pos__checkbox" /><label for="checkbox342" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox61" class="pos__checkbox" checked /><label for="checkbox61" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox62" class="pos__checkbox" checked /><label for="checkbox62" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree7">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox343" class="pos__checkbox" /><label for="checkbox343" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox63" class="pos__checkbox" checked /><label for="checkbox63" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox64" class="pos__checkbox" checked /><label for="checkbox64" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree7">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox344" class="pos__checkbox" /><label for="checkbox344" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox65" class="pos__checkbox" checked /><label for="checkbox65" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox66" class="pos__checkbox" checked /><label for="checkbox66" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree7">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox345" class="pos__checkbox" /><label for="checkbox345" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox67" class="pos__checkbox" checked /><label for="checkbox67" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox68" class="pos__checkbox" checked /><label for="checkbox68" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree7">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox346" class="pos__checkbox" /><label for="checkbox346" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox69" class="pos__checkbox" checked /><label for="checkbox69" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox70" class="pos__checkbox" checked /><label for="checkbox70" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--프로젝트 PM-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox347" class="pos__checkbox" /><label for="checkbox347" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree8"><span class="icon-toggle"></span>프로젝트 담당자</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree8">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox348" class="pos__checkbox" /><label for="checkbox348" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox71" class="pos__checkbox" checked /><label for="checkbox71" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox72" class="pos__checkbox" checked /><label for="checkbox72" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree8">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox349" class="pos__checkbox" /><label for="checkbox349" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox73" class="pos__checkbox" checked /><label for="checkbox73" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox74" class="pos__checkbox" checked /><label for="checkbox74" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree8">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox350" class="pos__checkbox" /><label for="checkbox350" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox75" class="pos__checkbox" checked /><label for="checkbox75" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox76" class="pos__checkbox" checked /><label for="checkbox76" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree8">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox351" class="pos__checkbox" /><label for="checkbox351" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox77" class="pos__checkbox" checked /><label for="checkbox77" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox78" class="pos__checkbox" checked /><label for="checkbox78" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree8">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox352" class="pos__checkbox" /><label for="checkbox352" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox79" class="pos__checkbox" checked /><label for="checkbox79" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox80" class="pos__checkbox" checked /><label for="checkbox80" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--프로젝트 담당자-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox353" class="pos__checkbox" /><label for="checkbox353" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree9"><span class="icon-toggle"></span>조회전용</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree9">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox354" class="pos__checkbox" /><label for="checkbox354" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox81" class="pos__checkbox" checked /><label for="checkbox81" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox82" class="pos__checkbox" checked /><label for="checkbox82" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree9">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox355" class="pos__checkbox" /><label for="checkbox355" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox83" class="pos__checkbox" checked /><label for="checkbox83" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox84" class="pos__checkbox" checked /><label for="checkbox84" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree9">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox356" class="pos__checkbox" /><label for="checkbox356" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox85" class="pos__checkbox" checked /><label for="checkbox85" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox86" class="pos__checkbox" checked /><label for="checkbox86" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree9">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox357" class="pos__checkbox" /><label for="checkbox357" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox87" class="pos__checkbox" checked /><label for="checkbox87" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox88" class="pos__checkbox" checked /><label for="checkbox88" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree9">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox358" class="pos__checkbox" /><label for="checkbox358" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox89" class="pos__checkbox" checked /><label for="checkbox89" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox90" class="pos__checkbox" checked /><label for="checkbox90" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--조회전용-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox359" class="pos__checkbox" /><label for="checkbox359" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree10"><span class="icon-toggle"></span>본부 견적부서</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree10">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox360" class="pos__checkbox" /><label for="checkbox360" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox91" class="pos__checkbox" checked /><label for="checkbox91" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox92" class="pos__checkbox" checked /><label for="checkbox92" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree10">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox361" class="pos__checkbox" /><label for="checkbox361" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox93" class="pos__checkbox" checked /><label for="checkbox93" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox94" class="pos__checkbox" checked /><label for="checkbox94" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree10">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox362" class="pos__checkbox" /><label for="checkbox362" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox95" class="pos__checkbox" checked /><label for="checkbox95" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox96" class="pos__checkbox" checked /><label for="checkbox96" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree10">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox363" class="pos__checkbox" /><label for="checkbox363" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox97" class="pos__checkbox" checked /><label for="checkbox97" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox98" class="pos__checkbox" checked /><label for="checkbox98" tabindex="0"></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree10">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox364" class="pos__checkbox" /><label for="checkbox364" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox99" class="pos__checkbox" checked /><label for="checkbox99" tabindex="0"></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox100" class="pos__checkbox" checked /><label
+																	for="checkbox100"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--본부 견적부서-->
+														<tr class="title">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox365" class="pos__checkbox" /><label for="checkbox365" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree11"><span class="icon-toggle"></span>사업관리부서</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr class="sub-sub" idx="tree11">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox366" class="pos__checkbox" /><label for="checkbox366" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox101" class="pos__checkbox" checked /><label
+																	for="checkbox101"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox102" class="pos__checkbox" checked /><label
+																	for="checkbox102"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree11">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox367" class="pos__checkbox" /><label for="checkbox367" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox103" class="pos__checkbox" checked /><label
+																	for="checkbox103"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox104" class="pos__checkbox" checked /><label
+																	for="checkbox104"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree11">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox368" class="pos__checkbox" /><label for="checkbox368" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox105" class="pos__checkbox" checked /><label
+																	for="checkbox105"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox106" class="pos__checkbox" checked /><label
+																	for="checkbox106"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree11">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox369" class="pos__checkbox" /><label for="checkbox369" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox107" class="pos__checkbox" checked /><label
+																	for="checkbox107"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox108" class="pos__checkbox" checked /><label
+																	for="checkbox108"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree11">
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk" id="checkbox370" class="pos__checkbox" /><label for="checkbox370" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">구매의뢰목록</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox109" class="pos__checkbox" checked /><label
+																	for="checkbox109"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="checkbox textC">
+																<input type="checkbox" name="chk3" id="checkbox110" class="pos__checkbox" checked /><label
+																	for="checkbox110"
+																	tabindex="0"
+																></label>
+															</td>
+															<td class="textL">설비관리</td>
+															<td class="textL">구매의뢰</td>
+														</tr>
+														<!--사업관리부서-->
+													</tbody>
+												</table>
+												<!--// pos__table E -->
+											</div>
+											<!--// pos__scroll E -->
+										</div>
+										<!--// pos__table-box E -->
+									</div>
+									<!--// pos__layout-left E -->
+
+									<!-- pos__layout-left S -->
+									<div class="pos__layout-left col-4">
+										<!-- pos__box-control S -->
+										<div class="pos__box-control">
+											<button class="btn__next">
+												<span class="icon-arrow"><!--다음--></span>
+											</button>
+											<button class="btn__previous">
+												<span class="icon-arrow"><!--이전--></span>
+											</button>
+										</div>
+										<!--// pos__box-control E -->
+
+										<!-- pos__table-top S -->
+										<div class="pos__table-top">
+											<h3>전체메뉴</h3>
+										</div>
+										<!--// pos__table-top E -->
+
+										<!-- pos__table-box S -->
+										<div class="pos__table-box">
+											<!-- pos__scroll S -->
+											<div class="pos__scroll">
+												<!-- pos__table S -->
+												<!-- 트리 형식의 table일 경우 class="pos__table-toggle" 추가 -->
+												<table class="pos__table pos__table-toggle">
+													<colgroup>
+														<col style="width: 2%" />
+														<col style="width: 98%" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th class="checkbox textC">
+																<input type="checkbox" name="Allchk2" id="checkboxAll2" class="pos__checkbox-All" /><label for="checkboxAll2"></label>
+															</th>
+															<th>
+																메뉴명<button type="button" class="btn__sore"><span class="icon-sort"></span></button>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="title on">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox400" class="pos__checkbox" /><label for="checkbox400" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12"><span class="icon-toggle"></span>설비관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox401" class="pos__checkbox" /><label for="checkbox401" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-1"><span class="icon-toggle"></span>구매의뢰</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-1">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox402" class="pos__checkbox" /><label for="checkbox402" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-1">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox403" class="pos__checkbox" /><label for="checkbox403" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold on" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox404" class="pos__checkbox" /><label for="checkbox404" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-2"><span class="icon-toggle"></span>견적관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-2">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox405" class="pos__checkbox" /><label for="checkbox405" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-2">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox406" class="pos__checkbox" /><label for="checkbox406" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox407" class="pos__checkbox" /><label for="checkbox407" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-3"><span class="icon-toggle"></span>검수관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-3">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox408" class="pos__checkbox" /><label for="checkbox408" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-3">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox409" class="pos__checkbox" /><label for="checkbox409" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox410" class="pos__checkbox" /><label for="checkbox410" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-4"><span class="icon-toggle"></span>지급관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-4">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox411" class="pos__checkbox" /><label for="checkbox411" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-4">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox412" class="pos__checkbox" /><label for="checkbox412" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox413" class="pos__checkbox" /><label for="checkbox413" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-5"><span class="icon-toggle"></span>발주방안</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-5">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox414" class="pos__checkbox" /><label for="checkbox414" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-5">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox415" class="pos__checkbox" /><label for="checkbox415" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold on" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox416" class="pos__checkbox" /><label for="checkbox416" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-6"><span class="icon-toggle"></span>입고관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-6">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox417" class="pos__checkbox" /><label for="checkbox417" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">검수관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-6">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox418" class="pos__checkbox" /><label for="checkbox418" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">검수관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-6">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox419" class="pos__checkbox" /><label for="checkbox419" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">검수관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-6">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox420" class="pos__checkbox" /><label for="checkbox420" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">검수관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-6">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox421" class="pos__checkbox" /><label for="checkbox421" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">검수관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-6">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox422" class="pos__checkbox" /><label for="checkbox422" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">검수관리</td>
+														</tr>
+														<tr class="sub-sub unfold2" idx="tree12-6">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox423" class="pos__checkbox" /><label for="checkbox423" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">검수관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox424" class="pos__checkbox" /><label for="checkbox424" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-7"><span class="icon-toggle"></span>자재관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-7">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox425" class="pos__checkbox" /><label for="checkbox425" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-7">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox426" class="pos__checkbox" /><label for="checkbox426" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox427" class="pos__checkbox" /><label for="checkbox427" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-8"><span class="icon-toggle"></span>수출입관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-8">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox428" class="pos__checkbox" /><label for="checkbox428" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-8">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox429" class="pos__checkbox" /><label for="checkbox429" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox430" class="pos__checkbox" /><label for="checkbox430" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-9"><span class="icon-toggle"></span>제작관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-9">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox431" class="pos__checkbox" /><label for="checkbox431" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-9">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox432" class="pos__checkbox" /><label for="checkbox432" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox433" class="pos__checkbox" /><label for="checkbox433" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-10"><span class="icon-toggle"></span>협력업체</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-10">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox434" class="pos__checkbox" /><label for="checkbox434" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-10">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox435" class="pos__checkbox" /><label for="checkbox435" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox436" class="pos__checkbox" /><label for="checkbox436" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-11"><span class="icon-toggle"></span>자재관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-11">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox437" class="pos__checkbox" /><label for="checkbox437" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-11">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox438" class="pos__checkbox" /><label for="checkbox438" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox439" class="pos__checkbox" /><label for="checkbox439" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-12"><span class="icon-toggle"></span>수출입관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox440" class="pos__checkbox" /><label for="checkbox440" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox441" class="pos__checkbox" /><label for="checkbox441" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox442" class="pos__checkbox" /><label for="checkbox442" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-13"><span class="icon-toggle"></span>제작관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-13">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox443" class="pos__checkbox" /><label for="checkbox443" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-13">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox444" class="checkbox444" /><label for="checkbox439" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub unfold" idx="tree12">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox445" class="pos__checkbox" /><label for="checkbox445" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit" idx="tree12-14"><span class="icon-toggle"></span>협력업체</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-14">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox446" class="pos__checkbox" /><label for="checkbox446" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+														<tr class="sub-sub" idx="tree12-14">
+															<td class="checkbox textC pd-0">
+																<input type="checkbox" name="chk2" id="checkbox447" class="pos__checkbox" /><label for="checkbox447" tabindex="0"></label>
+															</td>
+															<td class="textL tree-tit">계약관리</td>
+														</tr>
+													</tbody>
+												</table>
+												<!--// pos__table E -->
+											</div>
+											<!--// pos__scroll E -->
+										</div>
+										<!--// pos__table-box E -->
+									</div>
+									<!--// pos__layout-left E -->
+								</div>
+								<!--// pos__table-layout E -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:none" d="M0 0h24v24H0z" transform="rotate(180 12 12)"/>
+    <g transform="rotate(180 567 395.5)">
+        <circle data-name="타원 46" cx="1" cy="1" r="1" transform="translate(1121 778)"/>
+        <circle data-name="타원 48" cx="1" cy="1" r="1" transform="translate(1121 782)"/>
+        <circle data-name="타원 47" cx="1" cy="1" r="1" transform="translate(1121 774)"/>
+    </g>
+</svg>

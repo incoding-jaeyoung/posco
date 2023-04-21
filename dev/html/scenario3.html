@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" class="pos__iframe-body">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+		<style>
+			.pos__contents-box > .mCustomScrollBox > .mCSB_container {
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body class="pos__iframe-body">
+		<!-- 컨텐츠 pos__contents-box S -->
+		<div class="pos__contents-box">
+			<!-- 컨텐츠 - top 버튼 S -->
+			<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+			<!--// 컨텐츠 - top 버튼 S -->
+
+			<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+			<div class="pos__data" style="height: 100%">
+				<!-- pos__title S -->
+				<div class="pos__title">
+					<h1>타이틀 텍스트</h1>
+					<!-- pos__title-btn S -->
+					<ul class="pos__title-btn">
+						<li>
+							<button type="button" class="btn__info">
+								<span class="icon-infoB"><!--안내--></span>
+							</button>
+							<span class="icon-malkanBK">안내</span>
+						</li>
+						<li>
+							<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+								<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+							</button>
+							<span class="icon-malkanBK">즐겨찾기</span>
+						</li>
+						<li>
+							<button type="button" class="btn__blank" onclick="">
+								<span class="icon-blank"><!--새창--></span>
+							</button>
+							<span class="icon-malkanBK">새창열기</span>
+						</li>
+					</ul>
+					<!--// pos__title-btn E -->
+
+					<!-- pos__title-btn-right S -->
+					<ul class="pos__title-btn-right">
+						<li>
+							<button type="button" class="btn__basic color-orange"><span>버튼</span></button>
+						</li>
+						<li>
+							<button type="button" class="btn__basic color-orange"><span>버튼</span></button>
+						</li>
+						<li>
+							<button type="button" class="btn__basic color-blue"><span>버튼</span></button>
+						</li>
+						<li>
+							<button type="button" class="btn__basic color-blue"><span>버튼</span></button>
+						</li>
+					</ul>
+					<!--// pos__title-btn-right E -->
+				</div>
+				<!--// pos__title E -->
+
+				<!-- pos__search-box S -->
+				<div class="pos__search-box">
+					<!-- pos__search-cont S -->
+					<div class="pos__search-cont">
+						<!-- pos__grid S -->
+						<div class="pos__grid">
+							<!-- pos__grid-row S -->
+							<ul class="pos__grid-row">
+								<li class="col">
+									<!-- pos__form-box S -->
+									<dl class="pos__form-box">
+										<dt class="tit">
+											<label for="pos1"><span>레이블명</span></label>
+										</dt>
+										<dd>
+											<input class="pos__input-text" id="pos1" type="text" name="" value="" placeholder="가이드 텍스트" />
+										</dd>
+									</dl>
+									<!--// pos__form-box E -->
+								</li>
+								<li class="col">
+									<!-- pos__form-box S -->
+									<dl class="pos__form-box">
+										<dt class="tit">
+											<label for="pos2"><span>레이블명</span></label>
+										</dt>
+										<dd>
+											<input class="pos__input-text" id="pos2" type="text" name="" value="" placeholder="가이드 텍스트" />
+										</dd>
+									</dl>
+									<!--// pos__form-box E -->
+								</li>
+								<li class="col">
+									<!-- pos__form-box S -->
+									<dl class="pos__form-box">
+										<dt class="tit">
+											<label for="pos3"><span>레이블명</span></label>
+										</dt>
+										<dd>
+											<select class="pos__select" data-placeholder="선택" id="pos3">
+												<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+												<option>선택</option>
+												<option>선택</option>
+												<option>선택</option>
+											</select>
+										</dd>
+									</dl>
+									<!--// pos__form-box E -->
+								</li>
+								<li class="col">
+									<!-- pos__form-box S -->
+									<dl class="pos__form-box">
+										<dt class="tit">
+											<label for="pos4"><span>레이블명</span></label>
+										</dt>
+										<dd>
+											<select class="pos__select" data-placeholder="선택" id="pos4">
+												<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+												<option>선택</option>
+												<option>선택</option>
+												<option>선택</option>
+											</select>
+										</dd>
+									</dl>
+									<!--// pos__form-box E -->
+								</li>
+							</ul>
+							<!--// pos__grid-row E -->
+						</div>
+						<!--// pos__grid E -->
+					</div>
+					<!--// pos__search-cont E -->
+
+					<!-- pos__search-right S -->
+					<div class="pos__search-right">
+						<!-- pos__btn-box S -->
+						<div class="pos__btn-box">
+							<button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+						</div>
+						<!--// pos__btn-box E -->
+					</div>
+					<!--// pos__search-right E -->
+				</div>
+				<!--// pos__search-box E -->
+
+				<!-- pos__table-top S -->
+				<div class="pos__table-top">
+					<h3>테이블타이틀</h3>
+					<!-- pos__table-btn S -->
+					<ul class="pos__table-btn">
+						<li>
+							<button type="button" class="btn__small color-blue2" onclick='$("#popup").dialog("open");'><span>삭제</span></button>
+						</li>
+					</ul>
+					<!--// pos__table-btn E -->
+				</div>
+				<!--// pos__table-top E -->
+
+				<!-- pos__table-box--new S -->
+				<div class="pos__table-box--new" style="height: calc(100% - 177px)">
+					<div id="sheetDivP01" style="height: 100%"></div>
+				</div>
+				<!--// pos__table-box--new E -->
+			</div>
+			<!--// 컨텐츠 작성 영역 E -->
+		</div>
+		<!--// 컨텐츠 pos__contents-box E -->
+
+		<!-- 토스트 팝업 : 예외 팝업 pos__popup-toast S -->
+		<div class="pos__popup-toast" style="display: none">
+			<p>선택한 항목을 삭제했습니다.</p>
+		</div>
+		<!--// 토스트 팝업 : 예외 팝업 pos__popup-toast E -->
+
+		<!-- 팝업 -->
+		<div id="popup" class="pos__popup" title="팝업 타이틀">
+			<div class="pos__popup-contents">
+				<!-- pos__popup-box S -->
+				<div class="pos__popup-box">
+					<!-- pos__info-text S -->
+					<div class="pos__info-text textC">
+						<span class="icon-question"><!--아이콘--></span>
+						<p>삭제 후에는 복구할 수 없습니다.<br />저장하시겠습니까?</p>
+					</div>
+					<!--// pos__info-text E -->
+				</div>
+				<!--// pos__popup-box E -->
+			</div>
+			<div class="pos__popup-footer">
+				<button type="button" class="btn__basic"><span>취소</span></button>
+				<button type="button" class="btn__basic color-blue btn__popup-confirm" onclick='$("#popup").dialog("close");'><span>확인</span></button>
+			</div>
+		</div>
+		<!-- //팝업 -->
+
+		<!-- 팝업 -->
+		<div id="popup-favorites" class="pos__popup-favorites" title="즐겨찾기 추가">
+			<div class="pos__popup-contents">
+				<!-- pos__popup-box S -->
+				<div class="pos__popup-box">
+					<p class="pd-t24">즐겨찾기에 추가합니다.</p>
+
+					<!-- pos__form-box S -->
+					<dl class="pos__form-box">
+						<dt class="tit">
+							<label for="favorites"><span>폴더</span></label>
+						</dt>
+						<dd>
+							<select class="pos__select" data-placeholder="선택" id="favorites" data-placeholder="선택">
+								<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+								<option>폴더명 1</option>
+								<option>폴더명 2</option>
+								<option>폴더명 3</option>
+							</select>
+						</dd>
+					</dl>
+					<!--// pos__form-box E -->
+				</div>
+				<!--// pos__popup-box E -->
+			</div>
+			<div class="pos__popup-footer">
+				<button type="button" class="btn__basic" onclick='$("#popup-favorites").dialog("close");'><span>취소</span></button>
+				<button type="button" class="btn__basic color-blue"><span>확인</span></button>
+			</div>
+		</div>
+		<!-- //팝업 -->
+
+		<script>
+			var ibP01 = {
+				//시트 초기화 구문
+				init: {
+					Cfg: {
+						InfoRowConfig: {
+							Visible: false,
+						},
+						//Hover: "0",
+						//FocusWholeRow: true,
+					},
+					//중앙(메인) 컬럼 설정
+					Cols: [
+						{ Header: { Value: "", HeaderCheck: 1 }, Type: "Bool", Name: "CheckData", Align: "Center" },
+						{ Header: "번호", Type: "Text", Name: "TextData01", Width: 60, Align: "Center" },
+						{ Header: "타이틀", Type: "Text", Name: "TextData02", RelWidth: true },
+						{ Header: "상태", Type: "Text", Name: "TextData03", Width: 50, Align: "Center" },
+						{ Header: "작성자", Type: "Text", Name: "TextData04", Width: 80, Align: "Center" },
+						{ Header: "등록일", Type: "Text", Name: "TextData05", Width: 100, Align: "Center" },
+					],
+				},
+				//시트객체 생성
+				create: function () {
+					var options = this.init;
+
+					options.Events = this.event;
+					IBSheet.create({
+						id: "sheetP01", // 생성할 시트의 id
+						el: "sheetDivP01", // 시트를 생성할 Dom 객체 및 id
+						options: options, // 생성될 시트의 속성
+						data: this.data, // 생성될 시트의 정적데이터
+					});
+				},
+				//조회 데이터
+				data: [
+					{
+						CheckData: true,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: true,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "Y",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+					{
+						CheckData: false,
+						TextData01: "00",
+						TextData02: "게시글제목",
+						TextData03: "N",
+						TextData04: "홍길동",
+						TextData05: "2022/01/01",
+					},
+				],
+			};
+			ibP01.create();
+		</script>
+
+		<script>
+			$(document).ready(function () {
+				$(".btn__popup-confirm").on("click", function () {
+					$("#popup").dialog("close");
+					setTimeout(function () {
+						$(".pos__popup-toast").fadeIn().delay(600).fadeOut();
+					}, 200);
+				});
+			});
+		</script>
+	</body>
+</html>

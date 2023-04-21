@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="opacity:.001;fill:none" d="M0 0h24v24H0z"/>
+    <path data-name="패스 7164" d="M12.315 1H1.9a.928.928 0 0 0-.9.955v15.272a.928.928 0 0 0 .9.955h10.415m0-17.182v17.182m0-17.182h2.335a.693.693 0 0 1 .718.747v3.735a.693.693 0 0 1-.718.747M12.315 1v5.229h2.335m-2.335 11.953h2.335a.693.693 0 0 0 .718-.747v-4.483a.693.693 0 0 0-.718-.747m-2.335 5.976v-5.976h2.335m0 0a.693.693 0 0 0 .718-.747V6.976a.693.693 0 0 0-.718-.747m0 5.976h-1.8m0-5.976h1.8" transform="translate(3.882 2.318)" style="stroke-linejoin:round;stroke-width:1.8px;stroke:#123160;stroke-linecap:round;fill:none"/>
+    <path data-name="선 4" transform="translate(8.5 8.25)" style="stroke-width:1.5px;stroke:#123160;stroke-linecap:round;fill:none" d="M0 0h4"/>
+</svg>

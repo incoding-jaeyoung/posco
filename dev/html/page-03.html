@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+		
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>화면명</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 작성 -->
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>법규 위반/포상</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button
+												type="button"
+												class="btn__blank"
+												onclick="window.open('./layout.html#contentsArea', '대시보드 팝업', 'width=1650px,height=900px,scrollbars=yes')"
+											>
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+                                        <li>
+											<button type="button" class="btn__basic color-blue"><span>조회</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>저장</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+                                <!-- pos__search-box S -->
+                                <div class="pos__search-box">
+                                    <!-- pos__search-cont S -->
+                                    <div class="pos__search-cont">
+                                        <!-- pos__grid S -->
+                                        <div class="pos__grid">
+                                            <!-- pos__grid-row S -->
+                                            <ul class="pos__grid-row">
+                                                <li class="col">
+                                                    <!-- pos__form-box S -->
+                                                    <dl class="pos__form-box">
+                                                        <dt class="tit">
+                                                            <label for="pos1"><span>프로젝트</span></label>
+                                                        </dt>
+                                                        <dd>
+															<input class="pos__input-text pos__size-small3" id="" type="text" name="" value="">
+															<!-- pos__search S -->
+															<div class="pos__search mg-l6">
+																<input class="pos__input-text" id="pos1-1" type="text" name="" value="">
+																<button type="button" class="btn__search">
+																	<span><!--검색--></span>
+																</button>
+															</div>
+															<!--// pos__search E -->
+														</dd>
+                                                    </dl>
+                                                    <!--// pos__form-box E -->
+                                                </li>
+                                                <li class="col">
+                                                    <!-- pos__form-box S -->
+                                                    <dl class="pos__form-box">
+                                                        <dt class="tit">
+                                                            <label for="pos1"><span>분류</span></label>
+                                                        </dt>
+                                                        <dd>
+                                                            <select class="pos__select" data-placeholder="전체" id="pos1">
+                                                                <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                    <!--// pos__form-box E -->
+                                                </li>
+                                                <li class="col">
+                                                    <!-- pos__form-box S -->
+                                                    <dl class="pos__form-box">
+                                                        <dt class="tit">
+                                                            <label for="pos2"><span>분류2</span></label>
+                                                        </dt>
+                                                        <dd>
+                                                            <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                    <!--// pos__form-box E -->
+                                                </li>
+                                            </ul>
+                                            <ul class="pos__grid-row">
+												<li class="col">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit" style="min-width: 45.125px; width: 45.125px;">
+															<label for="pos5">
+																<span>계약일자</span>
+															</label>
+														</dt>
+														<dd>
+															<!-- pos__input-day S -->
+															<div class="pos__input-day">
+																<input class="pos__input-text hasDatepicker" type="text" name="pos5_fromID" id="pos5_fromID" date="pos5_FromYMD" date_ref="pos5_toID" placeholder="">
+																<button class="btn__day" onclick="IBSheet.v7.IBS_FromToCalendar(&quot;pos5_fromID&quot;,&quot;yyyy/MM/dd&quot;)">달력</button>
+															</div>
+															<!--// pos__input-day E -->
+															<span class="icon-wave"><!--~--></span>
+															<!-- pos__input-day S -->
+															<div class="pos__input-day">
+																<input class="pos__input-text hasDatepicker" type="text" name="pos5_toID" id="pos5_toID" date="pos5_ToYMD" date_ref="pos5_fromID" placeholder="">
+																<button class="btn__day" onclick="IBSheet.v7.IBS_FromToCalendar(&quot;pos5_toID&quot;,&quot;yyyy/MM/dd&quot;)">달력</button>
+															</div>
+															<!--// pos__input-day E -->
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+                                                <li class="col">
+                                                    <!-- pos__form-box S -->
+                                                    <dl class="pos__form-box">
+                                                        <dt class="tit">
+                                                            <label for="pos3"><span>등급</span></label>
+                                                        </dt>
+                                                        <dd>
+                                                            <select class="pos__select" data-placeholder="전체" id="pos3">
+                                                                <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                    <!--// pos__form-box E -->
+                                                </li>
+                                                <li class="col">
+
+                                                </li>
+											</ul>
+                                            <!--// pos__grid-row E -->
+                                        </div>
+                                        <!--// pos__grid E -->
+                                    </div>
+                                    <!--// pos__search-cont E -->
+
+                                    <!-- pos__search-right S -->
+                                    <div class="pos__search-right">
+                                        <!-- pos__btn-box S -->
+                                        <div class="pos__btn-box">
+                                            <button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+                                        </div>
+                                        <!--// pos__btn-box E -->
+                                    </div>
+                                    <!--// pos__search-right E -->
+                                </div>
+                                <!--// pos__search-box E -->
+                                
+                                <div class="pos__table-top">
+									<h3></h3>
+									<!-- pos__table-btn S -->
+									<ul class="pos__table-btn">
+										<li>
+											<button type="button" class="btn__small color-blue"><span>추가</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__small color-orange"><span>삭제</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__small color-blue2"><span>내리기</span></button>
+										</li>
+									</ul>
+									<!--// pos__table-btn E -->
+								</div>
+								<!-- pos__table-box S -->
+								<div class="pos__table-box">
+									<!-- pos__table S -->
+									<!-- hover 효과가 들어간 table일 경우 class="pos__table-hover" 추가 -->
+									<table class="pos__table">
+										<colgroup>
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+											<col style="width:" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="checkbox">
+													분류
+												</th>
+												<th>
+													기관명
+												</th>
+												<th>
+													분류2
+												</th>
+												<th>
+													발급일
+												</th>
+												<th>
+													등급
+												</th>
+												<th>
+													금액(원)
+												</th>
+												<th>
+													요구조치/포상내용
+												</th>
+												<th>
+													증빙첨부
+												</th>
+												<th>
+													등록일
+												</th>
+												<th>
+													등록자
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="checkbox">
+													<dl class="pos__form-box">
+														<dt class="tit displayhide">
+															<label for="column">
+																<span>분류</span>
+															</label>
+														</dt>
+														<dd class="textL">
+															<select class="pos__select" data-placeholder="선택" id="">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>처벌</option>
+																<option>컬럼선택</option>
+																<option>컬럼선택</option>
+															</select>
+														</dd>
+													</dl>
+												</td>
+												<td>(주)동아지질</td>
+												<td>
+													<dl class="pos__form-box">
+														<dt class="tit displayhide">
+															<label for="column">
+																<span>기관명</span>
+															</label>
+														</dt>
+														<dd class="textL">
+															<select class="pos__select" data-placeholder="선택" id="">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>폐기물</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+													
+												</td>
+												<td>
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit displayhide">
+															<label for="pos-date"><span>날짜선택</span></label>
+														</dt>
+														<dd>
+															<!-- pos__input-day S -->
+															<div class="pos__input-day">
+																<input type="text" class="pos__input-text" id="pos-date" placeholder="날짜선택" />
+																<button type="button" class="btn__day" onclick="ib.sampleBtn(this)" inp="pos-date">일반</button>
+															</div>
+															<!--// pos__input-day E -->
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+													
+												</td>
+												<td>
+													<dl class="pos__form-box">
+														<dt class="tit displayhide">
+															<label for="column">
+																<span>등급</span>
+															</label>
+														</dt>
+														<dd class="textL">
+															<select class="pos__select" data-placeholder="선택" id="">
+																<option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+																<option>과태료</option>
+																<option>선택</option>
+																<option>선택</option>
+															</select>
+														</dd>
+													</dl>
+												</td>
+												<td class="textR">500,000</td>
+												<td></td>
+												<td  class="textC"><span class="icon-ppt"></span> 대금조기집행대금조기품의대.pptx</td>
+												<td class="">2020-03-20</td>
+												<td>홍길동</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--// pos__table E -->
+								</div>
+								<!--// pos__table-box E -->
+
+								
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+		
+		<script>
+			var ib = ib || {};
+			ib = {
+				//시트 초기화 구문
+				init: {},
+				//시트객체 생성
+				create: function () {
+					window.Cal = null;
+				},
+				//화면 기능
+				sampleBtn: function () {
+					var btnObj = arguments[0];
+
+					// 달력내에 날짜 선택시
+					function callBack(pickdate) {
+						// pickdate는 1549897200000  와 같은 timeStamp 형태의 숫자가 넘어옴
+						var inp = btnObj.getAttribute("inp");
+						var format = "yyyy/MM/dd";
+						var str = "";
+
+						if (pickdate != "") {
+							if (isNaN(pickdate)) {
+								// 기간 데이터
+								var pd = pickdate.split(";");
+
+								for (var i = 0; i < pd.length; i++) {
+									if (pd[i].indexOf("~") > -1) {
+										var rdate = pd[i].split("~");
+
+										pd[i] = IBSheet.dateToString(parseInt(rdate[0], 10), format) + "~" + IBSheet.dateToString(parseInt(rdate[1], 10), format);
+									} else {
+										pd[i] = IBSheet.dateToString(parseInt(pd[i], 10), format);
+									}
+								}
+								str = pd.join(";");
+							} else {
+								// 단일 일자
+								str = IBSheet.dateToString(pickdate, format);
+							}
+						}
+
+						document.getElementById(inp).value = str;
+					}
+					// 달력 위치 정보
+					var pos = {
+						Mouse: 1,
+						Move: 1,
+					};
+
+					if (btnObj.innerText == "일반") {
+						// 2019/03/01
+						var optionCal = {
+							Date: new Date(),
+							Buttons: 0, // 달력 밑에 나타날 버튼을 설정 1 - Today, 2 - Clear, 4 - Ok, 8 - Yesterday
+							Texts: {
+								Ok: "선택",
+								Clear: "지우기",
+								Cancel: "취소",
+								Today: "오늘",
+								Yesterday: "어제",
+								EmptyTip: "공백",
+							},
+						};
+
+						if (Cal) {
+							Cal.Close();
+						}
+						Cal = IBSheet.showCalendar(optionCal, pos, callBack);
+					}
+				},
+			};
+			ib.create();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path style="fill:rgba(255,255,255,.2);opacity:.001" d="M0 0h24v24H0z" transform="rotate(180 12 12)"/>
+    <g transform="rotate(180 220.75 78.5)">
+        <rect data-name="사각형 159456" width="3" height="3" rx="1.5" transform="translate(428 137)"/>
+        <rect data-name="사각형 159457" width="3" height="3" rx="1.5" transform="translate(428 143.5)"/>
+        <rect data-name="사각형 159458" width="3" height="3" rx="1.5" transform="translate(428 150)"/>
+    </g>
+</svg>
