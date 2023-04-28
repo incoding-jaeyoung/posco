@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+		<script>
+			$(document).ready(function () {
+				setTimeout(() => {
+					$("#popup").dialog("open");
+				}, 1200);
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 팝업 -->
+		<div id="popup" class="pos__popup" title="현장조직등록">
+			<div class="pos__popup-contents">
+				<div class="pos__popup-box">
+                    <div class="pos__search-box">
+                        <!-- pos__search-cont S -->
+                        <div class="pos__search-cont">
+                            <div class="pos__table-box"  style="margin: 0;">
+                                <table class="pos__table">
+                                    <colgroup>
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                        <col style="width:" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>환경조직도순번</th>
+                                            <th>PJT직책</th>
+                                            <th>성명</th>
+                                            <th>직위</th>
+                                            <th>현장조직</th>
+                                            <th>프로젝트조직</th>
+                                            <th>사용유무</th>
+                                            <th>등록자</th>
+                                            <th>등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <div class="pos__search">
+                                                    <input class="pos__input-text" id="pos1-1" type="text" name="" value="홍길동" style="width: 80px;">
+                                                    <button type="button" class="btn__search">
+                                                        <span><!--검색--></span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>리더</td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox1" name="" checked />
+                                                    <label for="searchCheckbox1"></label>
+                                                </span>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>2023-05-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <div class="pos__search">
+                                                    <input class="pos__input-text" id="pos1-1" type="text" name="" value="홍길동" style="width: 80px;">
+                                                    <button type="button" class="btn__search">
+                                                        <span><!--검색--></span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>리더</td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox1" name="" checked />
+                                                    <label for="searchCheckbox1"></label>
+                                                </span>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>2023-05-05</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <div class="pos__search">
+                                                    <input class="pos__input-text" id="pos1-1" type="text" name="" value="홍길동" style="width: 80px;">
+                                                    <button type="button" class="btn__search">
+                                                        <span><!--검색--></span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>리더</td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="pos__select" data-placeholder="선택" id="pos3">
+                                                    <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                    <option>대기환경</option>
+                                                    <option>공사공종</option>
+                                                    <option>공사공종</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox1" name="" checked />
+                                                    <label for="searchCheckbox1"></label>
+                                                </span>
+                                            </td>
+                                            <td>홍길동</td>
+                                            <td>2023-05-05</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--// pos__search-cont E -->
+                    </div>
+                    <!--// pos__search-box E -->
+				</div>
+			</div>
+			<div class="pos__popup-footer">
+				<button type="button" class="btn__basic color-blue" onclick=''><span>추가</span></button>
+				<button type="button" class="btn__basic color-blue" onclick='$("#popup").dialog("close");'><span>저장</span></button>
+			</div>
+		</div>
+		<!-- //팝업 -->
+	</body>
+</html>

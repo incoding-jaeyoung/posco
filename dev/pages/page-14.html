@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			
+
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>물류이력</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>상황전파</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+								</div>
+								<!--// pos__title E -->
+								<!-- ibsheet S -->
+                                <div class="mg-t16 just-between">
+                                    <!-- pos__table-box S -->
+                                    <div style="width: 49.5%;">
+                                        <div class="pos__table-top">
+                                            <h3>수신인</h3>
+                                        </div>
+                                        <div class="pos__table-box">
+                                            <table class="pos__table">
+                                                <tbody>
+                                                    <colgroup>
+                                                        <col style="width: 50%;">
+                                                        <col style="width: 50%;">
+                                                    </colgroup>
+                                                    <tr>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="textL">
+                                                            <div class="just-between">
+                                                                <input class="pos__input-text" id="pos1" type="text" name="" value="건축본부 홍길동 010-1234-1234" style="width: 100%;" disabled />
+                                                                <button type="button" class="btn__small color-blue mg-l6" style="padding:0 10px 0 15px;"><span>삭제</span></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--// pos__table E -->
+                                        </div>
+                                        <div class="mg-t16 textR">
+                                            <input class="pos__input-text" id="pos1" type="text" name="" value="01034560982" /> 
+                                            <button type="button" class="btn__small color-orange"><span>추가</span></button>
+                                            <button type="button" class="btn__small color-blue"><span>검색</span></button>
+                                        </div>
+                                        <div class="pos__table-top">
+                                            <h3>발송내용</h3>
+                                        </div>
+                                        <div>
+                                            <textarea name="" id="" cols="30" rows="10" class="pos__textarea-box" style="height: 100px;"></textarea>
+                                        </div>
+                                        <div class="pos__table-top">
+                                            <div>
+                                                <span class="pos__checkbox-text">
+                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox1" name="" checked />
+                                                    <label for="searchCheckbox1">직접입력</label>
+                                                </span>
+                                                <span class="pos__checkbox-text">
+                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox2" name="" checked />
+                                                    <label for="searchCheckbox2">언론사</label>
+                                                </span>
+                                                <span class="pos__checkbox-text">
+                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox3" name="" checked />
+                                                    <label for="searchCheckbox3">관공서</label>
+                                                </span>
+                                            </div>
+                                            <button type="button" class="btn__small color-blue"><span>전송하기</span></button>
+                                        </div>
+                                    </div>
+                                    <div style="width: 49.5%;">
+                                        <div class="pos__table-top">
+                                            <h3>주요 연락처</h3>
+                                            <!-- pos__table-btn S -->
+                                            <ul class="pos__table-btn">
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>추가</span></button>
+                                                    </li>
+                                                    <li>
+                                                    <button type="button" class="btn__small color-blue"><span>저장</span></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>삭제</span></button>
+                                                </li>
+                                            </ul>
+                                            <!--// pos__table-btn E -->
+                                        </div>
+                                        <div class="pos__table-box">
+                                            <table class="pos__table">
+                                                <colgroup>
+                                                    <col style="width:15%" />
+                                                    <col style="width:10%px" />
+                                                    <col style="width:25%" />
+                                                    <col style="width:50%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>일자</th>
+                                                        <th>발송자</th>
+                                                        <th>수신인</th>
+                                                        <th>내용</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2023-03-22</td>
+                                                        <td>김길동</td>
+                                                        <td>박상민 외 17명</td>
+                                                        <td>인허가 행정관청 연수구청에서 금일 11시</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-03-22</td>
+                                                        <td>김길동</td>
+                                                        <td>박상민 외 17명</td>
+                                                        <td>인허가 행정관청 연수구청에서 금일 11시</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-03-22</td>
+                                                        <td>김길동</td>
+                                                        <td>박상민 외 17명</td>
+                                                        <td>인허가 행정관청 연수구청에서 금일 11시</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-03-22</td>
+                                                        <td>김길동</td>
+                                                        <td>박상민 외 17명</td>
+                                                        <td>인허가 행정관청 연수구청에서 금일 11시</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2023-03-22</td>
+                                                        <td>김길동</td>
+                                                        <td>박상민 외 17명</td>
+                                                        <td>인허가 행정관청 연수구청에서 금일 11시</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--// pos__table E -->
+                                        </div>
+                                    </div>
+                                    
+								<!--// pos__table-box E -->
+                                </div>
+								<!--// ibsheet E -->
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+	</body>
+</html>

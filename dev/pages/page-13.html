@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			
+
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 동시작업탭 영역 pos__tabMove S -->
+						<div class="pos__tabMove">
+							<!-- 동시작업탭 목록 pos__tabMove-list S -->
+							<div class="pos__tabMove-list">
+								<ul>
+									<li class="action">
+										<a href="#" onclick="return false;"><span>물류이력</span></a>
+										<button type="button" class="btn__del"><span>삭제</span></button>
+									</li>
+								</ul>
+							</div>
+							<!--// 동시작업탭 목록 pos__tabMove-list E -->
+
+							<!-- 동시작업탭 버튼 pos__tabMove-btn S -->
+							<ul class="pos__tabMove-btn">
+								<li>
+									<button type="button" class="btn__info2">
+										<span class="icon-info2"><!--정보--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK textL">
+										작업탭은 최대 10개까지 사용할 수 있습니다.<br />
+										새로운 작업탭을 열면 가장 오래된 탭을 자동으로 닫습니다.
+									</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__windowClose">
+										<span><!--전체닫기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">전체닫기</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+								<li>
+									<button type="button" class="btn__openFull" onclick="openFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<button type="button" class="btn__closeFull" onclick="closeFullScreenMode()">
+										<span><!--전체열기--></span>
+									</button>
+									<!-- 툴팁 icon-malkanBK S -->
+									<span class="icon-malkanBK">풀스크린</span>
+									<!--// 툴팁 icon-malkanBK E -->
+								</li>
+							</ul>
+							<!--// 동시작업탭 버튼 pos__tabMove-list E -->
+						</div>
+						<!--// 동시작업탭 영역 pos__tabMove E -->
+
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>비상사태</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__search-box S -->
+								<div class="pos__search-box">
+									<!-- pos__search-cont S -->
+									<div class="pos__search-cont">
+										<!-- pos__grid S -->
+										<div class="pos__grid">
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+												<li class="col col-6">
+													<!-- pos__form-box S -->
+													<dl class="pos__form-box">
+														<dt class="tit">
+															<label for="pos1">
+																<span>프로젝트<em>*</em></span>
+															</label>
+														</dt>
+														<dd>
+															<input class="pos__input-text pos__size-small" id="pos1" type="text" name="" value="070503EA" />
+															<!-- pos__search S -->
+															<div class="pos__search pos__size-small mg-l6">
+																<input class="pos__input-text" id="pos1-1" type="text" name="" value="인천도시철도 2호선 차량운행" />
+																<button type="button" class="btn__search">
+																	<span><!--검색--></span>
+																</button>
+															</div>
+															<!--// pos__search E -->
+														</dd>
+													</dl>
+													<!--// pos__form-box E -->
+												</li>
+												
+											</ul>
+											<!--// pos__grid-row E -->
+										</div>
+										<!--// pos__grid E -->
+									</div>
+									<!--// pos__search-cont E -->
+
+									<!-- pos__search-right S -->
+									<div class="pos__search-right">
+										<!-- pos__btn-box S -->
+										<div class="pos__btn-box">
+											<button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+										</div>
+										<!--// pos__btn-box E -->
+									</div>
+									<!--// pos__search-right E -->
+								</div>
+								
+								<!-- ibsheet S -->
+                                <div class="mg-t16 just-between">
+                                    <!-- pos__table-box S -->
+                                    <div style="width: 49.5%;">
+                                        <div class="pos__table-top">
+                                            <h3>시나리오</h3>
+                                            <!-- pos__table-btn S -->
+                                            <ul class="pos__table-btn">
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>저장</span></button>
+                                                </li>
+                                            </ul>
+                                            <!--// pos__table-btn E -->
+                                        </div>
+                                        <div>
+                                            <textarea name="" id="" cols="30" rows="10" class="pos__textarea-box" style="height: 100px;"></textarea>
+                                        </div>
+                                        <div class="pos__table-top">
+                                            <h3>행동요령</h3>
+                                            <!-- pos__table-btn S -->
+                                            <ul class="pos__table-btn">
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>저장</span></button>
+                                                </li>
+                                            </ul>
+                                            <!--// pos__table-btn E -->
+                                        </div>
+                                        <div>
+                                            <textarea name="" id="" cols="30" rows="10" class="pos__textarea-box" style="height: 100px;"></textarea>
+                                        </div>
+                                        <div class="pos__table-top">
+                                            <h3>현장 및 주변지역 역도</h3>
+                                            <!-- pos__table-btn S -->
+                                            <ul class="pos__table-btn">
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>사진등록</span></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>다운로드</span></button>
+                                                </li>
+                                            </ul>
+                                            <!--// pos__table-btn E -->
+                                        </div>
+                                        <div class="data-block">123123</div>
+                                    </div>
+                                    <div style="width: 49.5%;">
+                                        <div class="pos__table-top">
+                                            <h3>주요 연락처</h3>
+                                            <!-- pos__table-btn S -->
+                                            <ul class="pos__table-btn">
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>추가</span></button>
+                                                    </li>
+                                                    <li>
+                                                    <button type="button" class="btn__small color-blue"><span>저장</span></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>삭제</span></button>
+                                                </li>
+                                            </ul>
+                                            <!--// pos__table-btn E -->
+                                        </div>
+                                        <div class="pos__table-box">
+                                            <!-- pos__table S -->
+                                            <!-- hover 효과가 들어간 table일 경우 class="pos__table-hover" 추가 -->
+                                            <table class="pos__table">
+                                                <colgroup>
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                    <col style="width:" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>유관기관</th>
+                                                        <th>협업사항</th>
+                                                        <th>기관명/담당자</th>
+                                                        <th>여락처</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="textL">소방서</td>
+                                                        <td>화재,재난구조</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="textL">경찰서/파출소</td>
+                                                        <td>화재,재난구조</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="textL">소방서</td>
+                                                        <td>화재,재난구조</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--// pos__table E -->
+                                        </div>
+                                        <div class="pos__table-top">
+                                            <h3>비상조직도</h3>
+                                            <!-- pos__table-btn S -->
+                                            <ul class="pos__table-btn">
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>사진등록</span></button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn__small color-blue"><span>다운로드</span></button>
+                                                </li>
+                                            </ul>
+                                            <!--// pos__table-btn E -->
+                                        </div>
+                                        <div class="data-block">123123</div>
+                                    </div>
+                                    
+								<!--// pos__table-box E -->
+                                </div>
+								<!--// ibsheet E -->
+                                <div class="pos__table-top">
+                                    <h3>비상훈련실적</h3>
+                                    <!-- pos__table-btn S -->
+                                    <ul class="pos__table-btn">
+                                        <li>
+                                            <button type="button" class="btn__small color-blue"><span>추가</span></button>
+                                            </li>
+                                            <li>
+                                            <button type="button" class="btn__small color-blue"><span>저장</span></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn__small color-blue"><span>삭제</span></button>
+                                        </li>
+                                    </ul>
+                                    <!--// pos__table-btn E -->
+                                </div>
+                                <div class="pos__table-box">
+                                    <!-- pos__table S -->
+                                    <!-- hover 효과가 들어간 table일 경우 class="pos__table-hover" 추가 -->
+                                    <table class="pos__table">
+                                        <colgroup>
+                                            <col style="width:" />
+                                            <col style="width:" />
+                                            <col style="width:" />
+                                            <col style="width:" />
+                                            <col style="width:" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>훈련일자</th>
+                                                <th>훈련내용</th>
+                                                <th>특기사항</th>
+                                                <th>비고</th>
+                                                <th>파일첨부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>소방서</td>
+                                                <td>화재,재난구조</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>소방서</td>
+                                                <td>화재,재난구조</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>소방서</td>
+                                                <td>화재,재난구조</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>소방서</td>
+                                                <td>화재,재난구조</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>소방서</td>
+                                                <td>화재,재난구조</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--// pos__table E -->
+                                </div>
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+	</body>
+</html>

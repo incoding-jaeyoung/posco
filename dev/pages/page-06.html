@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포스코</title>
+		<!--  ibsheet 필수 js -->
+		<script src="../assets/plugins/ibsheet/js/ibleaders.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ko.js"></script>
+		<!--  ibsheet 선택/추가 js -->
+		<script src="../assets/plugins/ibsheet/js/ibsheet-common.js"></script>
+		<script src="../assets/plugins/ibsheet/js/ibsheet-dialog.js"></script>
+
+		<link rel="stylesheet" href="../assets/css/pos-style.css" />
+
+		<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/ResizeSensor.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="../assets/js/chosen.jquery.js"></script>
+		<script type="text/javascript" src="../assets/js/multiple-select.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.scrolltabs.js"></script>
+		<script type="text/javascript" src="../assets/js/circle-progress.js"></script>
+		<script type="text/javascript" src="../assets/js/pos-ui.js"></script>
+		<!-- layout JS -->
+		<script type="text/javascript" src="../assets/js/jquery.splitter.js"></script>
+		<script type="text/javascript" src="../assets/js/layoutUI.js"></script>
+	</head>
+	<body>
+		<div id="wrapper" class="">
+			
+
+
+			<!-- pos__container S -->
+			<div id="contentsArea" class="pos__container">
+				<!-- 컨텐츠 영역 pos__contents S -->
+				<div id="contents" class="pos__contents">
+					<!-- pos__contents-roundBOX S -->
+					<div class="pos__contents-roundBOX">
+						<!-- 컨텐츠 pos__contents-box S -->
+						<div class="pos__contents-box">
+							<!-- 컨텐츠 - top 버튼 S -->
+							<button type="button" class="btn__TOP"><span class="icon-TOP"></span>TOP</button>
+							<!--// 컨텐츠 - top 버튼 S -->
+
+							<!-- 컨텐츠 작성 영역 / 클래스명 고정 아님. 디폴트 class="pos__data" S -->
+							<div class="pos__data">
+								<!-- pos__title S -->
+								<div class="pos__title">
+									<h1>기초자료</h1>
+									<!-- pos__title-btn S -->
+									<ul class="pos__title-btn">
+										<li>
+											<button type="button" class="btn__info">
+												<span class="icon-infoB"><!--안내--></span>
+											</button>
+											<span class="icon-malkanBK">안내</span>
+										</li>
+										<li>
+											<button type="button" class="btn__favorites" onclick='$("#popup-favorites").dialog("open");'>
+												<span class="icon-favoritesBig"><!--즐겨찾기--></span>
+											</button>
+											<span class="icon-malkanBK">즐겨찾기</span>
+										</li>
+										<li>
+											<button type="button" class="btn__blank" onclick="">
+												<span class="icon-blank"><!--새창--></span>
+											</button>
+											<span class="icon-malkanBK">새창열기</span>
+										</li>
+									</ul>
+									<!--// pos__title-btn E -->
+
+									<!-- pos__title-btn-right S -->
+									<ul class="pos__title-btn-right">
+                                        <li>
+											<button type="button" class="btn__basic color-blue"><span>조회</span></button>
+										</li>
+										<li>
+											<button type="button" class="btn__basic color-orange"><span>저장</span></button>
+										</li>
+									</ul>
+									<!--// pos__title-btn-right E -->
+								</div>
+								<!--// pos__title E -->
+
+								<!-- pos__search-box S -->
+								<div class="pos__search-box">
+									<!-- pos__search-cont S -->
+									<div class="pos__search-cont">
+										<!-- pos__grid S -->
+										<div class="pos__grid">
+											<!-- pos__grid-row S -->
+											<ul class="pos__grid-row">
+                                                <li class="col">
+                                                    <!-- pos__form-box S -->
+                                                    <dl class="pos__form-box">
+                                                        <dt class="tit">
+                                                            <label for="pos1"><span>프로젝트</span></label>
+                                                        </dt>
+                                                        <dd>
+															<input class="pos__input-text pos__size-small3" id="" type="text" name="" value="">
+															<!-- pos__search S -->
+															<div class="pos__search mg-l6">
+																<input class="pos__input-text" id="pos1-1" type="text" name="" value="">
+																<button type="button" class="btn__search">
+																	<span><!--검색--></span>
+																</button>
+															</div>
+															<!--// pos__search E -->
+														</dd>
+                                                    </dl>
+                                                    <!--// pos__form-box E -->
+                                                </li>
+                                                <li class="col">
+                                                    <!-- pos__form-box S -->
+                                                    <dl class="pos__form-box">
+                                                        <dt class="tit">
+                                                            <label for="pos1"><span>공사종류</span></label>
+                                                        </dt>
+                                                        <dd>
+                                                            <select class="pos__select" data-placeholder="전체" id="pos1">
+                                                                <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                <option>건축공사</option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                    <!--// pos__form-box E -->
+                                                </li>
+                                                <li class="col">
+                                                    <!-- pos__form-box S -->
+                                                    <dl class="pos__form-box">
+                                                        <dt class="tit">
+                                                            <label for="pos2"><span>사용유무</span></label>
+                                                        </dt>
+                                                        <dd>
+                                                            <select class="pos__select" data-placeholder="전체" id="pos2">
+                                                                <option><!--미선택일 경우 공백 option 넣어주시면 됩니다.--></option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                                <option>선택</option>
+                                                            </select>
+                                                        </dd>
+                                                    </dl>
+                                                    <!--// pos__form-box E -->
+                                                </li>
+                                            </ul>
+											<!--// pos__grid-row E -->
+										</div>
+										<!--// pos__grid E -->
+									</div>
+									<!--// pos__search-cont E -->
+
+									<!-- pos__search-right S -->
+									<div class="pos__search-right">
+										<!-- pos__btn-box S -->
+										<div class="pos__btn-box">
+											<button type="button" class="btn__search-reset"><span class="icon-reset">초기화</span></button>
+										</div>
+										<!--// pos__btn-box E -->
+									</div>
+									<!--// pos__search-right E -->
+                                    
+								</div>
+                                <div class="pos__tab-wrap tab-block">
+                                    <div class="pos__tab-slide mg-0 mg-t40">
+                                        <!-- pos__tab-scroll S -->
+                                        <div class="pos__tab-scroll">
+                                            <span class="tab_selected">공사공종</span>
+                                            <span class="">공사장비</span>
+                                            <span class="">건물</span>
+                                            <span class="">유해자재</span>
+                                            <span class="">민원측면</span>
+                                        </div>
+                                    </div>
+                                    <div class="pos__tab-cont just-between table-content">
+                                        <div class="table-left">
+                                            <div class="pos__table-box">
+                                                <table class="pos__table new-table">
+                                                    <colgroup>
+                                                        <col style="width:" />
+                                                        <col style="width:120px" />
+                                                        <col style="width:120px" />
+                                                        <col style="width:120px" />
+                                                        <col style="width:120px" />
+                                                        <col style="width:" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2" rowspan="2">명칭</th>
+                                                            <th colspan="2">공사기간</th>
+                                                            <th rowspan="2">담당CE</th>
+                                                            <th rowspan="2">사용유무</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>시작일</th>
+                                                            <th>종료일</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th rowspan="3">가설공사</th>
+                                                            <td>비산먼지</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>홍길동</td>
+                                                            <td>
+                                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox1" name="" checked />
+                                                                    <label for="searchCheckbox1"></label>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>비산먼지</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>홍길동</td>
+                                                            <td>
+                                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox2" name="" checked />
+                                                                    <label for="searchCheckbox2"></label>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>비산먼지</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>홍길동</td>
+                                                            <td>
+                                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox3" name="" checked />
+                                                                    <label for="searchCheckbox3"></label>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가설공사</th>
+                                                            <td>비산먼지</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>홍길동</td>
+                                                            <td>
+                                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox3" name="" checked />
+                                                                    <label for="searchCheckbox3"></label>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가설공사</th>
+                                                            <td>비산먼지</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>홍길동</td>
+                                                            <td>
+                                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox3" name="" checked />
+                                                                    <label for="searchCheckbox3"></label>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가설공사</th>
+                                                            <td>비산먼지</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>홍길동</td>
+                                                            <td>
+                                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox3" name="" checked />
+                                                                    <label for="searchCheckbox3"></label>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가설공사</th>
+                                                            <td>비산먼지</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>2023-03-01</td>
+                                                            <td>홍길동</td>
+                                                            <td>
+                                                                <span class="pos__checkbox-text" style="margin: 0;">
+                                                                    <input type="checkbox" class="pos__checkbox" id="searchCheckbox3" name="" checked />
+                                                                    <label for="searchCheckbox3"></label>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="table-btn">
+                                            <button type="button" class="btn__basic color-blue"><span>추가</span></button>
+                                            <button type="button" class="btn__basic color-blue"><span>제거</span></button>
+                                        </div>
+                                        <div class="table-right">
+                                            <div class="pos__table-box">
+                                                <table class="pos__table new-table">
+                                                    <colgroup>
+                                                        <col style="width:120px;" />
+                                                        <col style="width:;" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2">메뉴목록</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th rowspan="3">가설공사</th>
+                                                            <td class="textL">비산먼지(EMA010A01)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textL">비산먼지</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textL">비산먼지</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="3">가설공사</th>
+                                                            <td class="textL">비산먼지(EMA010A01)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textL">비산먼지</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textL">비산먼지</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="3">가설공사</th>
+                                                            <td class="textL">비산먼지(EMA010A01)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textL">비산먼지</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textL">비산먼지</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가설공사</th>
+                                                            <td class="textL">비산먼지</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pos__tab-cont">
+                                        asdasdasd2
+                                    </div>
+                                    <div class="pos__tab-cont">
+                                        asdasdasd3
+                                    </div>
+                                </div>
+							</div>
+							<!--// 컨텐츠 작성 영역 E -->
+						</div>
+						<!--// 컨텐츠 pos__contents-box E -->
+					</div>
+					<!--// pos__contents-roundBOX E -->
+				</div>
+				<!--// 컨텐츠 영역 pos__contents E -->
+			</div>
+			<!--// pos__container E -->
+		</div>
+
+
+		<script>
+			var ib = ib || {};
+			ib = {
+				//시트 초기화 구문
+				init: {},
+				//시트객체 생성
+				create: function () {
+					window.Cal = null;
+				},
+				//화면 기능
+				sampleBtn: function () {
+					var btnObj = arguments[0];
+
+					// 달력내에 날짜 선택시
+					function callBack(pickdate) {
+						// pickdate는 1549897200000  와 같은 timeStamp 형태의 숫자가 넘어옴
+						var inp = btnObj.getAttribute("inp");
+						var format = "yyyy/MM/dd";
+						var str = "";
+
+						if (pickdate != "") {
+							if (isNaN(pickdate)) {
+								// 기간 데이터
+								var pd = pickdate.split(";");
+
+								for (var i = 0; i < pd.length; i++) {
+									if (pd[i].indexOf("~") > -1) {
+										var rdate = pd[i].split("~");
+
+										pd[i] = IBSheet.dateToString(parseInt(rdate[0], 10), format) + "~" + IBSheet.dateToString(parseInt(rdate[1], 10), format);
+									} else {
+										pd[i] = IBSheet.dateToString(parseInt(pd[i], 10), format);
+									}
+								}
+								str = pd.join(";");
+							} else {
+								// 단일 일자
+								str = IBSheet.dateToString(pickdate, format);
+							}
+						}
+
+						document.getElementById(inp).value = str;
+					}
+					// 달력 위치 정보
+					var pos = {
+						Mouse: 1,
+						Move: 1,
+					};
+
+					if (btnObj.innerText == "일반") {
+						// 2019/03/01
+						var optionCal = {
+							Date: new Date(),
+							Buttons: 5, // 달력 밑에 나타날 버튼을 설정 1 - Today, 2 - Clear, 4 - Ok, 8 - Yesterday
+							Texts: {
+								Ok: "선택",
+								Clear: "지우기",
+								Cancel: "취소",
+								Today: "오늘",
+								Yesterday: "어제",
+								EmptyTip: "공백",
+							},
+						};
+
+						if (Cal) {
+							Cal.Close();
+						}
+						Cal = IBSheet.showCalendar(optionCal, pos, callBack);
+					}
+				},
+			};
+			ib.create();
+		</script>
+	</body>
+</html>
